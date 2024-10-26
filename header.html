@@ -1,0 +1,42 @@
+<header class="header">
+
+   <div class="header-1">
+      <div class="flex">
+         <div class="share">
+            <a href="#" class="fab fa-facebook-f"></a>
+            <a href="#" class="fab fa-twitter"></a>
+            <a href="#" class="fab fa-instagram"></a>
+            <a href="#" class="fab fa-linkedin"></a>
+         </div>
+         <p> new <a href="login.html">login</a> | <a href="register.html">register</a> </p>
+      </div>
+   </div>
+
+   <div class="header-2">
+      <div class="flex">
+         <a href="home.html" class="logo">Bookly.</a>
+
+         <nav class="navbar">
+            <a href="home.html">home</a>
+            <a href="about.html">about</a>
+            <a href="shop.html">shop</a>
+            <a href="contact.html">contact</a>
+            <a href="orders.html">orders</a>
+         </nav>
+
+         <div class="icons">
+            <div id="menu-btn" class="fas fa-bars"></div>
+            <a href="search_page.html" class="fas fa-search"></a>
+            <div id="user-btn" class="fas fa-user"></div>
+            <a href="cart.html"> <i class="fas fa-shopping-cart"></i> <span>(<?html echo $cart_rows_number; ?>)</span> </a>
+         </div>
+
+         <div class="user-box">
+            <p>username : <span><?html echo $_SESSION['user_name']; ?></span></p>
+            <p>email : <span><?html echo $_SESSION['user_email']; ?></span></p>
+            <a href="logout.html" class="delete-btn">logout</a>
+         </div>
+      </div>
+   </div>
+
+</header>
