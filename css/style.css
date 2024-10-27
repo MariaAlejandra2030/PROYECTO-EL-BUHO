@@ -783,8 +783,7 @@ nav ul li a:hover {
    height: 100vh; /* Ocupa toda la altura de la ventana */
    background-color: #f4f4f4; /* Color de fondo de la página */
 }
-
-.form-container {
+ {
    background: #fff;
    padding: 20px;
    border-radius: 8px;
@@ -842,8 +841,7 @@ a:hover {
    text-decoration: underline; /* Subrayado al pasar el cursor */
 }
 
-
-.form-container img {
+ img {
    max-width: 200px;
    }
 
@@ -922,8 +920,81 @@ h4 {
 }
 
 
+/* login */
 
+.login {
+   display: flex; /* Usa flexbox para centrar el contenido */
+   justify-content: center; /* Centra horizontalmente */
+   align-items: center; /* Centra verticalmente */
+   height: 100vh; /* Ocupa toda la altura de la ventana */
+   font-size: 17px;
+   color: #3b7172;
+   
+}
 
+/* Contenedor de inicio de sesión */
+.login-container {
+   text-align: center; /* Centra el texto dentro del contenedor */
+   background-color: white; /* Fondo blanco */
+   padding: 40px; /* Espacio interno */
+   border-radius: 8px; /* Bordes redondeados */
+   border: 2px solid #3b7172; /* Borde del color especificado */
+   width: 450px; /* Ancho fijo */
+   
+}
+
+/* Estilos para el logo */
+.login-container img{
+   max-width: 100%; /* Se adapta al contenedor */
+   height: auto; /* Mantiene la proporción */
+}
+
+/* Estilo para los encabezados */
+h3 {
+   margin: 20px 0; /* Espaciado */
+}
+
+/* Estilos para los inputs */
+input[type="email"],
+input[type="password"] {
+   width: 100%; /* Ocupa todo el ancho */
+   padding: 10px; /* Espacio interno */
+   margin: 10px 0; /* Espaciado vertical */
+   border: 1px solid #ccc; /* Borde gris */
+   border-radius: 4px; /* Bordes redondeados */
+   box-sizing: border-box; /* Incluye el padding en el ancho */
+}
+
+/* Estilo para el botón */
+.btn {
+   background-color: #3b7172; /* Color de fondo del botón */
+   color: white; /* Color del texto */
+   padding: 10px;
+   border: none; /* Sin borde */
+   border-radius: 4px; /* Bordes redondeados */
+   cursor: pointer; /* Cambia el cursor al pasar por encima */
+   width: 100%; /* Ocupa todo el ancho */
+}
+
+/* Cambiar el color del botón al pasar el cursor */
+.btn:hover {
+   background-color: #0056b3; /* Color más oscuro al pasar el cursor */
+}
+
+/* Estilos para enlaces */
+a {
+   color: #007bff; /* Color de los enlaces */
+   text-decoration: none; /* Sin subrayado */
+}
+
+a:hover {
+   text-decoration: underline; /* Subrayado al pasar el cursor */
+}
+
+/* Estilo para párrafos */
+p {
+   margin: 10px 0; /* Espaciado vertical */
+}
 
 
 
