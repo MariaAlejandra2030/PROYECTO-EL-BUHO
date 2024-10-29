@@ -783,7 +783,9 @@ nav ul li a:hover {
    height: 100vh; /* Ocupa toda la altura de la ventana */
    background-color: #f4f4f4; /* Color de fondo de la página */
 }
- {
+
+.form-container {
+ 
    background: #fff;
    padding: 20px;
    border-radius: 8px;
@@ -876,20 +878,27 @@ a:hover {
 
 /* Estilo de la imagen */
 .books-detalles img {
-   max-width: 150px; /* Ajusta el tamaño de la imagen */
+   max-width: 280px; /* Ajusta el tamaño de la imagen */
    margin-right: 20px; /* Espacio entre la imagen y el texto */
    border-radius: 5px; /* Bordes redondeados para la imagen */
 }
 
 /* Información del libro */
-.book-info {
+.book-info 
+{
    display: flex;
    flex-direction: column; /* Organiza la información en columnas */
+   font-size: 17px;
+   padding: 30px;
+   color: #3b7172;
+   
 }
+
 
 /* Estilos adicionales para texto */
 h4 {
    margin: 10px 0 5px; /* Espacio superior e inferior */
+   font-size: 23px;
 }
 
 .author-detalles,
@@ -904,19 +913,33 @@ h4 {
    margin-bottom: 5px; /* Espacio inferior */
 }
 
+.fa-star:before
+ {
+   font-size: 30px;
+}
+
+.fa-star-half-alt:before
+{ 
+  font-size: 30px;
+}
+
+a img {
+   cursor: pointer; /* Cambia el cursor al pasar el mouse sobre la imagen */
+}
+
 .add-to-cart-detalles {
-   margin-top: 10px; /* Espacio superior */
-   padding: 10px;
-   background: #007bff; /* Color de fondo */
-   color: white; /* Color del texto */
-   border: none; /* Sin borde */
-   border-radius: 5px; /* Bordes redondeados */
-   cursor: pointer; /* Cambia el cursor al pasar por encima */
-   transition: background 0.3s; /* Efecto de transición */
+   margin-top: 10px;
+   padding: 5px 10px; /* Reduce el padding para que sea más pequeño */
+   background: #3b7172;
+   color: white;
+   border: none;
+   border-radius: 20px;
+   width: 190px; /* O ajusta a un valor específico, como 120px */
+   font-size: 20px; /* Ajusta el tamaño de la fuente si es necesario */
 }
 
 .add-to-cart-detalles:hover {
-   background: #0056b3; /* Color al pasar el mouse */
+   background:  #4d7f80; /* Color al pasar el mouse */
 }
 
 
@@ -937,16 +960,16 @@ h4 {
    text-align: center; /* Centra el texto dentro del contenedor */
    background-color: white; /* Fondo blanco */
    padding: 40px; /* Espacio interno */
-   border-radius: 8px; /* Bordes redondeados */
+   border-radius: 30px; /* Bordes redondeados */
    border: 2px solid #3b7172; /* Borde del color especificado */
-   width: 450px; /* Ancho fijo */
+   width: 400px; /* Ancho fijo */
    
 }
 
 /* Estilos para el logo */
 .login-container img{
-   max-width: 100%; /* Se adapta al contenedor */
-   height: auto; /* Mantiene la proporción */
+   margin-bottom: 20px; /* Espacio debajo del logo */
+   width: 150px; /* Ajusta el tamaño del logo */
 }
 
 /* Estilo para los encabezados */
@@ -995,6 +1018,77 @@ a:hover {
 p {
    margin: 10px 0; /* Espaciado vertical */
 }
+
+
+
+/*regisotro*/
+
+.registro {
+   display: flex;
+   justify-content: center; /* Centra horizontalmente */
+   align-items: center; /* Centra verticalmente */
+   height: 100vh; /* Ocupa toda la altura de la ventana */
+   background-color: #f0f0f0; /* Fondo suave */
+   font-size: 17px;
+   color: #3b7172;
+}
+
+.Registro-container {
+   background-color: white; /* Fondo blanco para el formulario */
+   padding: 20px;
+   border-radius: 30px; /* Bordes redondeados */
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+   width: 400px; /* Ancho fijo para el formulario */
+   text-align: center; /* Texto centrado */
+   border: 2px solid #3b7172; /* Borde del color especificado */
+   
+}
+
+.logo-registro {
+   margin-bottom: 20px; /* Espacio debajo del logo */
+   width: 150px; /* Ajusta el tamaño del logo */
+}
+
+h3 {
+   margin-bottom: 15px; /* Espacio debajo del título */
+}
+
+.box, .box-registro {
+   width: 100%; /* Ancho completo */
+   padding: 10px;
+   margin: 10px 0; /* Espacio entre campos */
+   border: 1px solid #ccc; /* Bordes de los campos */
+   border-radius: 5px; /* Bordes redondeados en los campos */
+}
+
+.btn-registro {
+   width: 100%;
+   padding: 10px;
+   background-color: #3b7172; /* Color del botón */
+   color: white; /* Texto blanco */
+   border: none; /* Sin borde */
+   border-radius: 5px; /* Bordes redondeados */
+   cursor: pointer; /* Cursor en forma de mano */
+}
+
+.btn-registro:hover {
+   background-color: #3b7172; /* Color del botón al pasar el mouse */
+}
+
+p {
+   margin-top: 10px; /* Espacio arriba del párrafo */
+}
+
+a {
+   color: #007bff; /* Color del enlace */
+   text-decoration: none; /* Sin subrayado */
+}
+
+a:hover {
+   text-decoration: underline; /* Subrayar al pasar el mouse */
+}
+
+
 
 
 
@@ -1107,4 +1201,6 @@ p {
        width: 100%; /* Una columna en pantallas pequeñas */
        margin-bottom: 20px; /* Espacio entre autores */
    }
+}
+
 }
