@@ -230,8 +230,11 @@ span.text\.bestseller {
 }
 
 .book img {
-   max-width: 100%; /* Ajusta la imagen al ancho del contenedor */
-   height: auto; /* Mantener proporciones */
+
+   max-width: 600px; /* Ajusta la imagen al ancho del contenedor */
+    height: 420px; /* 
+   /*max-width: 100%; /* Ajusta la imagen al ancho del contenedor */
+   /*height: auto; /* Mantener proporciones */
 }
 
 .add-to-cart {
@@ -1189,6 +1192,7 @@ a:hover {
    .books-row {
        flex-direction: column; /* Cambia la dirección a columna */
    }
+
 
    .book {
        margin: 10px 0; /* Espacio entre libros */
