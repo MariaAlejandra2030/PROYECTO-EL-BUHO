@@ -14,72 +14,44 @@
 
 </head>
 <body>
-   
-
-<div class="heading">
-   <h3>checkout</h3>
-   <p> <a href="home.html">home</a> / checkout </p>
-</div>
-
-<section class="display-order">
-
-  
-   <div class="grand-total"> grand total : <span></span> </div>
-
-</section>
-
 <section class="checkout">
 
    <form action="" method="post">
-      <h3>place your order</h3>
+      <h3>DATOS DE ENVÍO</h3>
       <div class="flex">
          <div class="inputBox">
-            <span>your name :</span>
-            <input type="text" name="name" required placeholder="enter your name">
+            <span>Pais*: </span>
+            <input type="text" name="name" required placeholder="Ingrese tu pais">
          </div>
          <div class="inputBox">
-            <span>your number :</span>
-            <input type="number" name="number" required placeholder="enter your number">
+            <span>Departamento</span>
+            <input type="number" name="number" required placeholder="Ingrese tu departamento">
          </div>
          <div class="inputBox">
-            <span>your email :</span>
-            <input type="email" name="email" required placeholder="enter your email">
+            <span>Localidad / Comuna</span>
+            <input type="email" name="email" required placeholder="Ingrese tu email">
          </div>
          <div class="inputBox">
-            <span>payment method :</span>
+            <span>Dirección*</span>
+            <input type="text" name="street" required placeholder="Ingrese tu dirección">
+         </div>
+         <div class="inputBox">
+            <span>Destinatario*</span>
+            <input type="number" required placeholder="Ingresa el nombre de quien recibe">
+         </div>
+         <div class="inputBox">
+            <span>Teléfono*</span>
+            <input type="text" name="city" required placeholder="">
+         </div>
+         <div class="inputBox">
+            <span>Metodo de pago</span>
             <select name="method">
-               <option value="cash on delivery">cash on delivery</option>
-               <option value="credit card">credit card</option>
-               <option value="paypal">paypal</option>
-               <option value="paytm">paytm</option>
+               <option value="cash on delivery">PSE</option>
+               <option value="credit card">Tarjeta de crédito</option>
             </select>
          </div>
-         <div class="inputBox">
-            <span>address line 01 :</span>
-            <input type="number" min="0" name="flat" required placeholder="e.g. flat no.">
-         </div>
-         <div class="inputBox">
-            <span>address line 01 :</span>
-            <input type="text" name="street" required placeholder="e.g. street name">
-         </div>
-         <div class="inputBox">
-            <span>city :</span>
-            <input type="text" name="city" required placeholder="e.g. mumbai">
-         </div>
-         <div class="inputBox">
-            <span>state :</span>
-            <input type="text" name="state" required placeholder="e.g. maharashtra">
-         </div>
-         <div class="inputBox">
-            <span>country :</span>
-            <input type="text" name="country" required placeholder="e.g. india">
-         </div>
-         <div class="inputBox">
-            <span>pin code :</span>
-            <input type="number" min="0" name="pin_code" required placeholder="e.g. 123456">
-         </div>
       </div>
-      <input type="submit" value="order now" class="btn" name="order_btn">
+      <input type="submit" value="Comprar ahora" class="btn" name="order_btn">
    </form>
 
 </section>

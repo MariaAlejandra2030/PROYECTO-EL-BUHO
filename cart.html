@@ -15,42 +15,78 @@
 </head>
 <body>
 
-<div class="heading">
-   <h3>shopping cart</h3>
-   <p> <a href="home.html">home</a> / cart </p>
-</div>
+   <nav>
+      <div class="logo">
+          <a href="home.html"></a>
+          <img src="images/Logo_ELBUHO.png" alt="Logo1"><!-- Aquí puedes usar una imagen en lugar de texto -->
+      </div>
+      <ul>
+          <li><a href="best-sellers.html">Lo Más Vendido</a></li>
+          <li><a href="bestseller.html">Best Seller</a></li>
+          <li>
+              <input type="text" placeholder="Buscar libro o autor..." class="search-bar">
+              <button type="submit" class="search-button"><i class="fas fa-search"></i></button>
+          </li>
+          <li><a href="login.html"><i class="fa-solid fa-user"></i>Iniciar Sesión</a></li>
+          <li><a href="cart.html"><i class="fas fa-shopping-cart"></i> Carrito</a></li>
+      </ul>
+  </nav>
 
 <section class="shopping-cart">
 
-   <h1 class="title">products added</h1>
-
-   <div class="box-container">
-      <div class="box">
-         <a href="cart.php?delete=<?php echo $fetch_cart['id']; ?>" class="fas fa-times" onclick="return confirm('delete this from cart?');"></a>
-         <img src="uploaded_img/<?php echo $fetch_cart['image']; ?>" alt="">
-         <div class="name"><?php echo $fetch_cart['name']; ?></div>
-         <div class="price">$<?php echo $fetch_cart['price']; ?>/-</div>
-         <form action="" method="post">
-            <input type="hidden" name="cart_id" value="<?php echo $fetch_cart['id']; ?>">
-            <input type="number" min="1" name="cart_quantity" value="<?php echo $fetch_cart['quantity']; ?>">
-            <input type="submit" name="update_cart" value="update" class="option-btn">
-         </form>
-         <div class="sub-total"> sub total : <span>$<?php echo $sub_total = ($fetch_cart['quantity'] * $fetch_cart['price']); ?>/-</span> </div>
-      </div>
+   <div class="infoCompra">
+       <div class="infoCarro">
+         <h3 class="carro">Carro ( 2 productos)</h3>
+         <img class="imgLibro" src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1528206996i/38746485.jpg" alt="libroVenta">
+         <h4 class="eliminarLibro">Eliminar este libro</h4>
+       </div>
+       <div class="infoLIbro">
+         <ul>
+            <li class="nomLibro">Michelle Obama</li>
+            <li class="contador"><input  class= "number" type="number" min="1" name="product_quantity" value="1" class="qty"></li>
+            <li class="precioLibro">$90.000</li>
+            <li class="direccionEnv">
+               <h3 class="titDirecionEnv">Direciòn de envio</h3>
+               <h3 class="direccionDest">Cr 64 # 75 a 37 int 204 Medellìn Antioquia</h3>
+            </li>
+         </ul>
+    </div>
    </div>
 
-   <div style="margin-top: 2rem; text-align:center;">
-      <a href="cart.php?delete_all" class="delete-btn <?php echo ($grand_total > 1)?'':'disabled'; ?>" onclick="return confirm('delete all from cart?');">delete all</a>
+   <div class="infoPrecio">
+      <ul>
+         <h3 class="resumenCom">Resumen de la compra</h3>
+         <li class="precProductos">
+            <h4>Productos</h4>
+            <h4 class="valores">$90.000</h4>
+         </li>
+         <div class="linea"></div>
+         <li class="descuento">
+            <h4>Descuento</h4>
+            <h4 class="valores">$0</h4>
+         </li>
+         <div class="linea"></div>
+         <li class="descuento">
+            <h4>TOTAL</h4>
+            <h4 class="valores">  $90.000</h4>
+         </li>
+         </ul>
+         <button class="botonCompra" type="submit">Continuar compra</button>
+      <ul class="bancos">
+         <li>
+            <img src="https://coopamigossigloxxi.co/wp-content/uploads/2022/08/logo-pse.png" alt="pse" width="50rem">
+         </li>
+         <li>
+            <img src="https://1000marcas.net/wp-content/uploads/2019/12/logo-Mastercard.png" alt="masterCard" width="70rem">
+         </li>
+         <li>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Visa_Logo.png/640px-Visa_Logo.png" alt="visa" width="70rem">
+         </li>
+      </ul>
+      
    </div>
-
-   <div class="cart-total">
-      <p>grand total : <span>$<?php echo $grand_total; ?>/-</span></p>
-      <div class="flex">
-         <a href="shop.html" class="option-btn">continue shopping</a>
-         <a href="checkout.html" class="btn <?php echo ($grand_total > 1)?'':'disabled'; ?>">proceed to checkout</a>
-      </div>
+   
    </div>
-
 </section>
 
 <script src="js/script.js"></script>

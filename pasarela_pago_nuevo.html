@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>pasarela de pago</title>
+
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+ <div class="contenedor1">
+        <div class="contenedo2">
+            <ul>
+                <li class="tarjetadecre">
+                    <button class="botonRedondo"></button>
+                    <h5 class="text1tarjeta">Tarjeta de creidto o debito</h5>
+                </li>
+                <li class="logostarjetas">
+                    <img src="https://1000marcas.net/wp-content/uploads/2019/12/logo-Mastercard.png" alt="mastercard" width="50rem">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Visa_Logo.png/640px-Visa_Logo.png" alt="mastercard" width="60rem">
+                </li>
+                <li class="datosdepago">
+                    <h5 class="text2datpag">Datos pago</h5>
+                    <img class="imgcandado" src="https://images.vexels.com/media/users/3/132074/isolated/lists/0117cb0129593faa02646a8277ca80e3-icono-de-candado-de-seguridad.png" alt="candado" width="20rem">
+                </li>
+                <h5 class="numTarjetaTex">Número de la tarjeta</h5>
+                <li class="ingNumTarjeta">
+                    <img class="imgtarjeta" src="https://png.pngtree.com/png-clipart/20230407/original/pngtree-credit-card-line-icon-png-image_9032229.png" alt="simbolotarjeadecredito" width="20rem">
+                    <input class="textIntTarjeta" type="text" tarjeta="tarjeta" id="tarjeta" placeholder="0000 0000 0000 0000">
+                </li>
+                <li class="fechaCodigo">
+                    <div >
+                        <h5 class="numTarjetaTex">Fecha de vencimiento</h5>
+                        <input  class="texFechCod" type="text" tarjeta="fechaVen" id="FechaVen" placeholder="MM/AA">
+                    </div>
+                    <div>
+                        <h5 class="numTarjetaTex">Código de seguridad</h5>
+                        <input class="texFechCod" type="text" tarjeta="CodSegue" id="CodSegur" placeholder="000">
+                    </div>
+                </li>
+                <li class="guardarTarjeta">
+                    <label><input class="checkbox" type="checkbox">Guardar la tarjeta para futuras compras.</label>
+                    
+                </li>
+            </ul>
+            <div class="lineaHori"></div>
+            <ul>
+                <li class="tarjetadecre">
+                    <button class="botonRedondo"></button>
+                    <h5 class="text1tarjeta">PSE</h5>
+                </li>
+                <li class="logostarjetas">
+                    <img src="https://coopamigossigloxxi.co/wp-content/uploads/2022/08/logo-pse.png" alt="pse" width="80rem">
+                </li>
+            </ul>
+        </div>
+        <button class="botonCompra">Comprar ahora </button>
+
+ </div>
+    
+</body>
+</html>
