@@ -4,27 +4,101 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>register</title>
+   <title>Register</title>
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
    <link rel="stylesheet" href="css/style.css">
-
 </head>
 <body>
    <section class="registro">
-   <div class="Registro-container">
-      <img src="images/logo2.png" alt="Logo" class="logo-registro"> <!-- Agrega tu logo aquí -->
-      <form action="" method="post-registro">
-          <h3>Register Now</h3>
-          <input type="text" name="name" placeholder="Enter your name" required class="box">
-          <input type="email" name="email" placeholder="Enter your email" required class="box">
-          <input type="password" name="password" placeholder="Enter your password" required class="box">
-          <input type="password" name="cpassword" placeholder="Confirm your password" required class="box">
-          <input type="submit" name="submit-registro" value="Register Now" class="btn-registro">
-          <p>Already have an account? <a href="login.html">Login now</a></p>
-      </form>
-  </div>
-</section>
-</div>
+      <div class="Registro-container">
+         <img src="images/logo2.png" alt="Logo" class="logo-registro"> <!-- Agrega tu logo aquí -->
+         <form id="registroForm" onsubmit="return validarFormulario()">
+            <h3>Register Now</h3>
+            <input type="text" name="name" id="name" placeholder="Enter your name" required class="box">
+            <div id="errorName" class="error"></div>
+
+            <input type="email" name="email" id="email" placeholder="Enter your email" required class="box">
+            <div id="errorEmail" class="error"></div>
+
+            <input type="password" name="password" id="password" placeholder="Enter your password" required class="box">
+            <div id="errorPassword" class="error"></div>
+
+            <input type="password" name="cpassword" id="cpassword" placeholder="Confirm your password" required class="box">
+            <div id="errorCpassword" class="error"></div>
+
+            <input type="submit" name="submit-registro" value="Register Now" class="btn-registro">
+            <p>Already have an account? <a href="login.html">Login now</a></p>
+         </form>
+      </div>
+   </section>
+
+   <!-- Estilos para los mensajes de error -->
+   <style>
+      .error {
+         color: red;
+         font-size: 12px;
+         margin-top: 5px;
+      }
+   </style>
+
+   <script>
+      // Función para validar el formulario
+      function validarFormulario() {
+         // Limpiar los mensajes de error al inicio
+         document.getElementById('errorName').innerText = '';
+         document.getElementById('errorEmail').innerText = '';
+         document.getElementById('errorPassword').innerText = '';
+         document.getElementById('errorCpassword').innerText = '';
+
+         // Obtener los valores de los campos
+         const name = document.getElementById('name').value;
+         const email = document.getElementById('email').value;
+         const password = document.getElementById('password').value;
+         const cpassword = document.getElementById('cpassword').value;
+
+         let validado = true;
+
+         // Validación del campo "Nombre" (Debe tener más de 2 caracteres)
+         if (name.trim() === '') {
+            document.getElementById('errorName').innerText = 'The name is required.';
+            validado = false;
+         } else if (name.trim().length <= 2) {
+            document.getElementById('errorName').innerText = 'The name must be longer than 2 characters.';
+            validado = false;
+         }
+
+         // Validación del campo "Correo Electrónico"
+         const regexEmail = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+         if (email.trim() === '') {
+            document.getElementById('errorEmail').innerText = 'The email is required.';
+            validado = false;
+         } else if (!regexEmail.test(email)) {
+            document.getElementById('errorEmail').innerText = 'Please enter a valid email address.';
+            validado = false;
+         }
+
+         // Validación del campo "Contraseña"
+         if (password.trim() === '') {
+            document.getElementById('errorPassword').innerText = 'The password is required.';
+            validado = false;
+         } else if (password.length < 6) {
+            document.getElementById('errorPassword').innerText = 'The password must be at least 6 characters long.';
+            validado = false;
+         }
+
+         // Validación del campo "Confirmar Contraseña"
+         if (cpassword.trim() === '') {
+            document.getElementById('errorCpassword').innerText = 'Please confirm your password.';
+            validado = false;
+         } else if (cpassword !== password) {
+            document.getElementById('errorCpassword').innerText = 'Passwords do not match.';
+            validado = false;
+         }
+
+         // Si todo está validado, se permite el envío del formulario
+         return validado;
+      }
+   </script>
 
 </body>
 </html>

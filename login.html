@@ -11,18 +11,69 @@
 </head>
 <body>  
    <section class="login">
-   <div class="login-container">
-      <img src="images/logo2.png" alt="Logo"> 
-      <h3>Iniciar Sesión</h3>
-      <form action="" method="post">
-         <input type="email" name="email" placeholder="Correo Electrónico" required class="box">
-         <input type="password" name="password" placeholder="Contraseña" required class="box">
-         <p><a href="#">¿Olvidaste la contraseña?</a></p> <!-- Enlace para recuperar contraseña -->
-         <p>Al continuar, aceptas las <a href="#">Condiciones de uso</a> y el <a href="#">Aviso de privacidad</a></p>
-         <input type="submit" name="submit" value="Iniciar Sesión" class="btn">
-      </form>
-      <p>¿No tienes una cuenta? <a href="registro.html">Regístrate ahora</a></p>
-   </div>
-</section>
+      <div class="login-container">
+         <img src="images/logo2.png" alt="Logo"> 
+         <h3>Iniciar Sesión</h3>
+         <form id="loginForm" onsubmit="return validarFormulario()">
+            <input type="email" name="email" id="email" placeholder="Correo Electrónico" required class="box">
+            <div id="errorEmail" class="error"></div>
+
+            <input type="password" name="password" id="password" placeholder="Contraseña" required class="box">
+            <div id="errorPassword" class="error"></div>
+
+            <p><a href="#">¿Olvidaste la contraseña?</a></p> <!-- Enlace para recuperar contraseña -->
+            <p>Al continuar, aceptas las <a href="#">Condiciones de uso</a> y el <a href="#">Aviso de privacidad</a></p>
+
+            <input type="submit" name="submit" value="Iniciar Sesión" class="btn">
+         </form>
+         <p>¿No tienes una cuenta? <a href="registro.html">Regístrate ahora</a></p>
+      </div>
+   </section>
+
+   <!-- Estilos para los mensajes de error -->
+   <style>
+      .error {
+         color: red;
+         font-size: 12px;
+         margin-top: 5px;
+      }
+   </style>
+
+   <!-- Script JavaScript para validación -->
+   <script>
+      function validarFormulario() {
+         // Limpiar los mensajes de error
+         document.getElementById('errorEmail').innerText = '';
+         document.getElementById('errorPassword').innerText = '';
+
+         // Obtener los valores de los campos
+         const email = document.getElementById('email').value;
+         const password = document.getElementById('password').value;
+
+         let validado = true;
+
+         // Validación del correo electrónico
+         const regexEmail = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+         if (email.trim() === '') {
+            document.getElementById('errorEmail').innerText = 'El correo electrónico es obligatorio.';
+            validado = false;
+         } else if (!regexEmail.test(email)) {
+            document.getElementById('errorEmail').innerText = 'Por favor ingresa un correo electrónico válido.';
+            validado = false;
+         }
+
+         // Validación de la contraseña
+         if (password.trim() === '') {
+            document.getElementById('errorPassword').innerText = 'La contraseña es obligatoria.';
+            validado = false;
+         } else if (password.length < 6) {
+            document.getElementById('errorPassword').innerText = 'La contraseña debe tener al menos 6 caracteres.';
+            validado = false;
+         }
+
+         // Si todo está validado, permite el envío del formulario
+         return validado;
+      }
+   </script>
 </body>
 </html>
