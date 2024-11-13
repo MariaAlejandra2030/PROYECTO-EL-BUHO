@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Checkout</title>
+
+   <!-- Font Awesome cdn link -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+   <!-- Custom css file link -->
+   <link rel="stylesheet" href="../Public/css/style.css">
+
+</head>
+<body>
+   <nav>
+      <div class="logo">
+          <a href="home.html"></a>
+          <img src="../Public/images/Logo_ELBUHO.png" alt="Logo1">
+      </div>
+      <ul>
+          <li><a href="../Vistas/Masvendido.html">Lo Más Vendido</a></li>
+          <!-- Menú desplegable de Categorías -->
+          <li class="dropdown">
+              <a href="javascript:void(0)">Categorías</a>
+              <ul class="dropdown-menu">
+                  <li><a href="../Vistas/Categoriapersonal.html">Desarrollo Personal</a></li>
+                  <li><a href="../Vistas/Categoriasarte.html">Arte</a></li>
+                  <li><a href="../Vistas/Categoriasficcion.html">Ficción</a></li>
+                  <li><a href="../Vistas/Categoriasinfantil.html">Infantiles</a></li>
+              </ul>
+          </li>
+          <li>
+              <input type="text" placeholder="Buscar libro o autor..." class="search-bar">
+              <button type="submit" class="search-button"><i class="fas fa-search"></i></button>
+          </li>
+          <li><a href="../Vistas/login.html">Iniciar Sesión</a></li>
+          <li><a href="../Vistas/cart.html"><i class="fas fa-shopping-cart"></i> Carrito</a></li>
+      </ul>
+  </nav>
+
+<section class="checkout">
+
+   <form action="" method="post" id="checkout-form">
+      <h3>DATOS DE ENVÍO</h3>
+      <div class="flex">
+         <div class="inputBox">
+            <span>Pais*: </span>
+            <select name="country" id="country" required>
+               <option value="">Selecciona tu país</option>
+               <option value="colombia">Colombia</option>
+               <option value="chile">Chile</option>
+               <option value="mexico">México</option>
+               <option value="argentina">Argentina</option>
+            </select>
+         </div>
+         <div class="inputBox">
+            <span>Departamento*</span>
+            <select name="department" id="department" required>
+               <option value="">Selecciona tu departamento</option>
+               <!-- Los departamentos se llenarán según el país seleccionado -->
+            </select>
+         </div>
+         <div class="inputBox">
+            <span>Localidad / Comuna</span>
+            <input type="text" name="city" id="city" required placeholder="Ingrese tu ciudad">
+         </div>
+         <div class="inputBox">
+            <span>Dirección*</span>
+            <input type="text" name="street" id="address" required placeholder="Ingrese tu dirección">
+         </div>
+         <div class="inputBox">
+            <span>Destinatario*</span>
+            <input type="text" name="recipient" id="recipient" required placeholder="Ingresa el nombre de quien recibe">
+         </div>
+         <div class="inputBox">
+            <span>Teléfono*</span>
+            <input type="text" name="phone" id="phone" required placeholder="Ingresa tu teléfono">
+         </div>
+         <div class="inputBox">
+            <span>Método de pago</span>
+            <select name="payment-method" id="payment-method" required>
+               <option value="cash on delivery">PSE</option>
+               <option value="credit card">Tarjeta de crédito</option>
+            </select>
+         </div>
+      </div>
+
+      <!-- Tarjeta de crédito (se muestra solo si se selecciona "Tarjeta de crédito") -->
+      <div id="credit-card-info" style="display:none;">
+         <h4>Información de la tarjeta de crédito</h4>
+         <div class="inputBox">
+            <span>Número de tarjeta:</span>
+            <input type="text" id="card-number" placeholder="Número de tarjeta">
+         </div>
+         <div class="inputBox">
+            <span>Fecha de expiración:</span>
+            <input type="text" id="expiry-date" placeholder="MM/AA">
+         </div>
+         <div class="inputBox">
+            <span>CVV:</span>
+            <input type="text" id="cvv" placeholder="CVV">
+         </div>
+      </div>
+
+      <input type="submit" value="Comprar ahora" class="btn" name="order_btn">
+   </form>
+
+</section>
+
+<!-- JavaScript -->
+<script>
+// Función para actualizar los departamentos según el país seleccionado
+document.getElementById('country').addEventListener('change', function() {
+   const country = this.value;
+   const departmentSelect = document.getElementById('department');
+   
+   // Limpia los departamentos anteriores
+   departmentSelect.innerHTML = '<option value="">Selecciona tu departamento</option>';
+
+   // Agrega los departamentos correspondientes
+   if (country === 'colombia') {
+      departmentSelect.innerHTML += '<option value="bogota">Bogotá</option><option value="medellin">Medellín</option><option value="cartagena">Cartagena</option>';
+   } else if (country === 'chile') {
+      departmentSelect.innerHTML += '<option value="santiago">Santiago</option><option value="valparaiso">Valparaíso</option>';
+   } else if (country === 'mexico') {
+      departmentSelect.innerHTML += '<option value="cdmx">CDMX</option><option value="guadalajara">Guadalajara</option>';
+   } else if (country === 'argentina') {
+      departmentSelect.innerHTML += '<option value="buenos-aires">Buenos Aires</option><option value="cordoba">Córdoba</option>';
+   }
+});
+
+// Función para mostrar u ocultar el formulario de tarjeta de crédito según el método de pago seleccionado
+document.getElementById('payment-method').addEventListener('change', function() {
+   const paymentMethod = this.value;
+   const creditCardInfo = document.getElementById('credit-card-info');
+   
+   // Si el método es "Tarjeta de crédito", muestra el formulario de tarjeta
+   if (paymentMethod === 'credit card') {
+      creditCardInfo.style.display = 'block';
+   } else {
+      // Si es "PSE", oculta los campos de tarjeta de crédito
+      creditCardInfo.style.display = 'none';
+   }
+});
+
+// Validación de formulario antes de enviarlo
+document.getElementById('checkout-form').addEventListener('submit', function(event) {
+   event.preventDefault(); // Prevenir el envío del formulario
+
+   // Obtener los valores de los campos
+   const country = document.getElementById('country').value;
+   const department = document.getElementById('department').value;
+   const city = document.getElementById('city').value;
+   const address = document.getElementById('address').value;
+   const recipient = document.getElementById('recipient').value;
+   const phone = document.getElementById('phone').value;
+   const paymentMethod = document.getElementById('payment-method').value;
+
+   // Validación básica
+   if (!country || !department || !city || !address || !recipient || !phone) {
+      alert('Por favor, completa todos los campos obligatorios.');
+      return;
+   }
+
+   // Validación de teléfono (solo números)
+   const phoneRegex = /^[0-9]+$/;
+   if (!phoneRegex.test(phone)) {
+      alert('Por favor, ingresa un teléfono válido.');
+      return;
+   }
+
+   // Si el método de pago es tarjeta de crédito, validar los campos de la tarjeta
+   if (paymentMethod === 'credit card') {
+      const cardNumber = document.getElementById('card-number').value;
+      const expiryDate = document.getElementById('expiry-date').value;
+      const cvv = document.getElementById('cvv').value;
+
+      if (!cardNumber || !expiryDate || !cvv) {
+         alert('Por favor, completa toda la información de la tarjeta de crédito.');
+         return;
+      }
+
+      // Validar número de tarjeta (16 dígitos)
+      const cardNumberRegex = /^\d{16}$/;
+      if (!cardNumberRegex.test(cardNumber)) {
+         alert('El número de tarjeta debe tener 16 dígitos.');
+         return;
+      }
+   }
+
+   // Si todo es válido, simular el envío del formulario
+   alert('Formulario enviado correctamente. Procesando tu pedido...');
+   // Descomentar la siguiente línea si deseas que el formulario se envíe realmente
+   // this.submit();
+});
+</script>
+
+</body>
+</html>

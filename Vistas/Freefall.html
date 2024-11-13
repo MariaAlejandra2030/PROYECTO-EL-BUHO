@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Sobre Nosotros</title>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+   <link rel="stylesheet" href="../Public/css/style.css">
+</head>
+<body>
+
+   <nav>
+      <div class="logo">
+          <a href="../Vistas/principal.html"></a>
+          <img src="../Public/images/Logo_ELBUHO.png" alt="Logo1">
+      </div>
+      <ul>
+          <li><a href="../Vistas/Masvendido.html">Lo Más Vendido</a></li>
+          <!-- Menú desplegable de Categorías -->
+          <li class="dropdown">
+              <a href="javascript:void(0)">Categorías</a>
+              <ul class="dropdown-menu">
+                  <li><a href="../Vistas/Categoriapersonal.html">Desarrollo Personal</a></li>
+                  <li><a href="../Vistas/Categoriasarte.html">Arte</a></li>
+                  <li><a href="../Vistas/Categoriasficcion.html">Ficción</a></li>
+                  <li><a href="../Vistas/Categoriasinfantil.html">Infantiles</a></li>
+              </ul>
+          </li>
+          <li>
+              <input type="text" placeholder="Buscar libro o autor..." class="search-bar">
+              <button type="submit" class="search-button"><i class="fas fa-search"></i></button>
+          </li>
+          <li><a href="../Vistas/login.html">Iniciar Sesión</a></li>
+          <li><a href="../Vistas/cart.html"><i class="fas fa-shopping-cart"></i> Carrito</a></li>
+      </ul>
+  </nav>
+
+  <div class="books-container-detalles">
+    <h3>Nuestros Libros Destacados</h3>
+    <div class="books-rows-detalles1">
+       <div class="books-detalles">
+          <img src="../Public/images/Libro8.jpg" alt="Libro 1">
+          <div class="book-info">
+             <h4>Free Fall</h4>
+             <p class="author-detalles">Autor: David J. Schmidt </p>
+             <p class="price-detalles">Precio: $24.999</p>
+             <div class="stars-detalles">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+             </div>
+             <p class="description-detalles">Jackson es un astronauta que prueba un prototipo de nave interestelar en el espacio profundo.
+                Cuando regresa a casa, no hay nadie que lo reciba. La Tierra ha quedado en silencio. Ahora debe decidir: ¿quedarse en órbita,
+                viendo un planeta muerto pasar lentamente bajo sus ventanas, o aterrizar en la Tierra y luchar por la vida?
+            </p>
+             <button class="add-to-cart-detalles">Agregar al Carrito</button>
+          </div>
+       </div>
+    </div>
+ </div>
+ 
+
+<script src="../Public/js/script.js"></script>
+</body>
+</html>
