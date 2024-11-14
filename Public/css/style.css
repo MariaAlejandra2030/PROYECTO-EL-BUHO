@@ -209,7 +209,7 @@ nav {
 }
 
 nav .logo img {
-   width: 150px;
+   width: 220px;
 }
 
 /* Estilo de la lista de navegación */
@@ -438,10 +438,13 @@ nav ul li a {
 
 .book img {
 
-   max-width: 600px; /* Ajusta la imagen al ancho del contenedor */
-    height: 420px; /* 
-   /*max-width: 100%; /* Ajusta la imagen al ancho del contenedor */
-   /*height: auto; /* Mantener proporciones */
+   max-width: 600px; 
+    height: 373px; 
+   
+}
+.book:hover {
+   box-shadow: 0 20px 20px rgba(3, 175, 97, 0.3);
+   transform: translateY(-5px);
 }
 
 .add-to-cart {
@@ -565,7 +568,7 @@ nav ul li a {
 }
 
 .authors .box-container .box img{
-   width: 100%;
+   width: 103%;
    height: 40rem;
    object-fit: cover;
 }
@@ -1055,10 +1058,15 @@ a:hover {
 }
 
  img {
-   max-width: 200px;
+   max-width: 350px;
    }
 
-
+   .books-container {
+      background-image: url('../Public/images/Ansiedad');
+      background-size: cover;
+      background-position: center;
+      padding: 20px;  /* Ajusta el espacio alrededor del contenido */
+  }
 
 
 /* Estilos para la página de detalles */
