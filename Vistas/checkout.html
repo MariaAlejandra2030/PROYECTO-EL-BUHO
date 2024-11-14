@@ -40,14 +40,14 @@
       </ul>
   </nav>
 
-<section class="checkout">
+<section class="checkout-envio">
 
-   <form action="" method="post" id="checkout-form">
+   <form action="" method="post-envio" id="checkout-form-envio">
       <h3>DATOS DE ENVÍO</h3>
       <div class="flex">
-         <div class="inputBox">
+         <div class="inputBox-envio">
             <span>Pais*: </span>
-            <select name="country" id="country" required>
+            <select name="country" id="country-envio" required>
                <option value="">Selecciona tu país</option>
                <option value="colombia">Colombia</option>
                <option value="chile">Chile</option>
@@ -55,30 +55,30 @@
                <option value="argentina">Argentina</option>
             </select>
          </div>
-         <div class="inputBox">
+         <div class="inputBox-envio">
             <span>Departamento*</span>
             <select name="department" id="department" required>
                <option value="">Selecciona tu departamento</option>
                <!-- Los departamentos se llenarán según el país seleccionado -->
             </select>
          </div>
-         <div class="inputBox">
+         <div class="inputBox-envio">
             <span>Localidad / Comuna</span>
             <input type="text" name="city" id="city" required placeholder="Ingrese tu ciudad">
          </div>
-         <div class="inputBox">
+         <div class="inputBox-envio">
             <span>Dirección*</span>
             <input type="text" name="street" id="address" required placeholder="Ingrese tu dirección">
          </div>
-         <div class="inputBox">
+         <div class="inputBox-envio">
             <span>Destinatario*</span>
             <input type="text" name="recipient" id="recipient" required placeholder="Ingresa el nombre de quien recibe">
          </div>
-         <div class="inputBox">
+         <div class="inputBox-envio">
             <span>Teléfono*</span>
             <input type="text" name="phone" id="phone" required placeholder="Ingresa tu teléfono">
          </div>
-         <div class="inputBox">
+         <div class="inputBox-envio">
             <span>Método de pago</span>
             <select name="payment-method" id="payment-method" required>
                <option value="cash on delivery">PSE</option>
@@ -88,23 +88,23 @@
       </div>
 
       <!-- Tarjeta de crédito (se muestra solo si se selecciona "Tarjeta de crédito") -->
-      <div id="credit-card-info" style="display:none;">
+      <div id="credit-card-info-envio">
          <h4>Información de la tarjeta de crédito</h4>
-         <div class="inputBox">
+         <div class="inputBox-envio">
             <span>Número de tarjeta:</span>
             <input type="text" id="card-number" placeholder="Número de tarjeta">
          </div>
-         <div class="inputBox">
+         <div class="inputBox-envio">
             <span>Fecha de expiración:</span>
             <input type="text" id="expiry-date" placeholder="MM/AA">
          </div>
-         <div class="inputBox">
+         <div class="inputBox-envio">
             <span>CVV:</span>
             <input type="text" id="cvv" placeholder="CVV">
          </div>
       </div>
 
-      <input type="submit" value="Comprar ahora" class="btn" name="order_btn">
+      <input type="submit" value="Comprar ahora" class="btn-envio" name="order_btn-envio">
    </form>
 
 </section>

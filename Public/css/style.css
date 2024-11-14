@@ -158,10 +158,12 @@ html{
 }
 
 .flex {
-   display: flex; /* Usar flexbox para alinear */
-   justify-content: space-between; /* Espacio entre elementos */
-   align-items: center; /* Centrar verticalmente */
-   width: 100%; /* Ocupa el 100% del ancho */
+   display: flex;
+   justify-content: space-evenly;
+   width: 100%;
+   flex-direction: column;
+   flex-wrap: wrap;
+   align-content: space-between;
 }
 
 .text-left, .text-right {
@@ -211,6 +213,108 @@ nav {
 nav .logo img {
    width: 220px;
 }
+
+/* Estilo para la hoja de andres check */
+
+.checkout-envio {
+   width: 80%;
+   max-width: 800px;
+   margin: 20px auto;
+   padding: 25px 25px;
+   background-color: #fff;
+   border-radius: 21px;
+   border: 1px solid #3b7172;
+   font-size: 18px;
+}
+
+/* Título de la sección de envío */
+.checkout-envio h3 {
+   font-size: 24px;
+   margin-bottom: 20px;
+   text-align: center;
+}
+
+/* Contenedor del formulario */
+#checkout-form-envio {
+   display: flex;
+   flex-direction: column;
+}
+
+/* Contenedor de cada input o select */
+.inputBox-envio {
+   margin-bottom: 15px; /* Espacio entre los campos */
+}
+
+.inputBox-envio span {
+   font-weight: bold;
+   margin-bottom: 15px;
+   display: block;
+   color: #3B7172;
+}
+
+.inputBox-envio input,
+.inputBox-envio select {
+   width: 400%;
+   padding: 10px;
+   border: 1px solid #3b7172;
+   border-radius: 5px;
+   box-sizing: border-box; /* Asegura que el padding no afecte el ancho */
+}
+
+/* Estilo del botón de envío */
+.btn-envio {
+   background-color: #3b7172;
+   color: white;
+   border: none;
+   padding: 15px;
+   font-size: 16px;
+   cursor: pointer;
+   border-radius: 5px;
+   margin-top: 20px;
+   transition: background-color 0.3s ease;
+}
+
+.btn-envio:hover {
+   background-color: #45a049;
+}
+
+/* Estilo de la información de la tarjeta de crédito */
+#credit-card-info-envio {
+   display: none; /* Oculto por defecto */
+   margin-top: 20px;
+}
+
+#credit-card-info-envio h4 {
+   font-size: 20px;
+   margin-bottom: 15px;
+}
+
+.inputBox-envio input[type="text"] {
+   letter-spacing: 1px;
+}
+
+/* Estilo para el input de teléfono */
+#phone {
+   letter-spacing: 1px;
+}
+
+/* Estilo para los elementos select */
+select {
+   -webkit-appearance: none;
+   -moz-appearance: none;
+   appearance: none;
+   background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zY3JlZW5zYy9zZWFyY2ggMS5zZ2Y...');
+   background-position: right 10px center;
+   background-repeat: no-repeat;
+   background-size: 15px;
+}
+
+/* Asegurar que el select se vea bien */
+select:focus {
+   outline: none;
+   border-color: #4CAF50;
+}
+
 
 /* Estilo de la lista de navegación */
 nav ul {
@@ -1097,7 +1201,6 @@ a:hover {
 
 /* Estilo de la imagen */
 .books-detalles img {
-   max-width: 280px; /* Ajusta el tamaño de la imagen */
    margin-right: 20px; /* Espacio entre la imagen y el texto */
    border-radius: 5px; /* Bordes redondeados para la imagen */
 }
@@ -1173,6 +1276,7 @@ a img {
    height: 100vh; /* Ocupa toda la altura de la ventana */
    font-size: 17px;
    color: #3b7172;
+   background-color: #f0f0f0;
    
 }
 
