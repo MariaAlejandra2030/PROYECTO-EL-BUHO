@@ -29,7 +29,6 @@
       </div>
    </section>
 
-   <!-- Estilos para los mensajes de error -->
    <style>
       .error {
          color: red;
@@ -38,20 +37,16 @@
       }
    </style>
 
-   <!-- Script JavaScript para validación -->
    <script>
       function validarFormulario() {
-         // Limpiar los mensajes de error
          document.getElementById('errorEmail').innerText = '';
          document.getElementById('errorPassword').innerText = '';
 
-         // Obtener los valores de los campos
          const email = document.getElementById('email').value;
          const password = document.getElementById('password').value;
 
          let validado = true;
 
-         // Validación del correo electrónico
          const regexEmail = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
          if (email.trim() === '') {
             document.getElementById('errorEmail').innerText = 'El correo electrónico es obligatorio.';
@@ -61,7 +56,7 @@
             validado = false;
          }
 
-         // Validación de la contraseña
+
          if (password.trim() === '') {
             document.getElementById('errorPassword').innerText = 'La contraseña es obligatoria.';
             validado = false;
@@ -70,7 +65,6 @@
             validado = false;
          }
 
-         // Si todo está validado, permite el envío del formulario
          return validado;
       }
    </script>

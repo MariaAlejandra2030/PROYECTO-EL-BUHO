@@ -109,17 +109,14 @@
 
 </section>
 
-<!-- JavaScript -->
+
 <script>
-// Función para actualizar los departamentos según el país seleccionado
 document.getElementById('country').addEventListener('change', function() {
    const country = this.value;
    const departmentSelect = document.getElementById('department');
    
-   // Limpia los departamentos anteriores
    departmentSelect.innerHTML = '<option value="">Selecciona tu departamento</option>';
 
-   // Agrega los departamentos correspondientes
    if (country === 'colombia') {
       departmentSelect.innerHTML += '<option value="bogota">Bogotá</option><option value="medellin">Medellín</option><option value="cartagena">Cartagena</option>';
    } else if (country === 'chile') {
@@ -131,25 +128,21 @@ document.getElementById('country').addEventListener('change', function() {
    }
 });
 
-// Función para mostrar u ocultar el formulario de tarjeta de crédito según el método de pago seleccionado
 document.getElementById('payment-method').addEventListener('change', function() {
    const paymentMethod = this.value;
    const creditCardInfo = document.getElementById('credit-card-info');
    
-   // Si el método es "Tarjeta de crédito", muestra el formulario de tarjeta
    if (paymentMethod === 'credit card') {
       creditCardInfo.style.display = 'block';
    } else {
-      // Si es "PSE", oculta los campos de tarjeta de crédito
       creditCardInfo.style.display = 'none';
    }
 });
 
-// Validación de formulario antes de enviarlo
-document.getElementById('checkout-form').addEventListener('submit', function(event) {
-   event.preventDefault(); // Prevenir el envío del formulario
 
-   // Obtener los valores de los campos
+document.getElementById('checkout-form').addEventListener('submit', function(event) {
+   event.preventDefault(); 
+
    const country = document.getElementById('country').value;
    const department = document.getElementById('department').value;
    const city = document.getElementById('city').value;
@@ -158,20 +151,17 @@ document.getElementById('checkout-form').addEventListener('submit', function(eve
    const phone = document.getElementById('phone').value;
    const paymentMethod = document.getElementById('payment-method').value;
 
-   // Validación básica
    if (!country || !department || !city || !address || !recipient || !phone) {
       alert('Por favor, completa todos los campos obligatorios.');
       return;
    }
 
-   // Validación de teléfono (solo números)
    const phoneRegex = /^[0-9]+$/;
    if (!phoneRegex.test(phone)) {
       alert('Por favor, ingresa un teléfono válido.');
       return;
    }
 
-   // Si el método de pago es tarjeta de crédito, validar los campos de la tarjeta
    if (paymentMethod === 'credit card') {
       const cardNumber = document.getElementById('card-number').value;
       const expiryDate = document.getElementById('expiry-date').value;
@@ -182,7 +172,6 @@ document.getElementById('checkout-form').addEventListener('submit', function(eve
          return;
       }
 
-      // Validar número de tarjeta (16 dígitos)
       const cardNumberRegex = /^\d{16}$/;
       if (!cardNumberRegex.test(cardNumber)) {
          alert('El número de tarjeta debe tener 16 dígitos.');
@@ -190,10 +179,7 @@ document.getElementById('checkout-form').addEventListener('submit', function(eve
       }
    }
 
-   // Si todo es válido, simular el envío del formulario
    alert('Formulario enviado correctamente. Procesando tu pedido...');
-   // Descomentar la siguiente línea si deseas que el formulario se envíe realmente
-   // this.submit();
 });
 </script>
 
