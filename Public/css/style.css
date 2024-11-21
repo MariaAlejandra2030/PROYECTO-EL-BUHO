@@ -462,8 +462,8 @@ nav ul li a {
 
 .bancos {
    display: flex;
-   gap: 20px;
    margin-top: 1rem;
+   height: 38px;
 }
 
 .bancos img {
@@ -1470,82 +1470,85 @@ a:hover {
 }
 
 
-/*Andres*/
+/*Andres cart*/
 
-.shopping-cart{
+
+.shopping-cart {
    display: flex;
-   flex-wrap: wrap;
-   padding: 6rem;
-   background-color: #f0f0f0;
-   font-family:impact;
-   color: #3B7172;
-   font-size: 13px;
-  
+   justify-content: space-between; /* Espaciado entre los elementos */
+   padding: 20px;
 }
 
-.infoCompra{
-   display:flex;
-   padding: 3rem;
-   margin: 2rem auto;
-
-   text-decoration: none;
-   background-color: white;
-   border-radius: 2rem;
-}
-
-.carro{
-   margin-top: 0%;
-   margin-bottom: 2rem;
-   font-size: 2rem;
-
-}
-.imgLibro{
+.cart-container {
    display: flex;
-   width: 20rem;
+   justify-content: space-between;
+   width: 100%;
+   gap: 20px; /* Espacio entre los dos contenedores */
 }
-.eliminarLibro{
-   text-decoration:underline;
-   color: #c92f1e;
+
+.infoCompra {
+   width: 60%; /* O ajusta según sea necesario */
+}
+
+.infoPrecio {
+   width: 35%; /* Ocupa el 35% del espacio disponible */
+   background-color: #f4f4f4; /* Un color de fondo claro para destacar el resumen */
+   padding: 20px;
+   border-radius: 8px;
+   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.resumenCom {
    font-size: 1.5rem;
-   margin-top: 2rem;
+   margin-bottom: 20px;
 }
-.eliminarLibro:hover{
-   color: #3B7172;
-   text-decoration: none;
+
+.precProductos, .descuento {
+   display: flex;
+   justify-content: space-between;
+   margin-bottom: 10px;
+}
+
+.linea {
+   border-bottom: 1px solid #ddd;
+   margin: 10px 0;
+}
+
+.botonCompra {
+   background-color: #007bff;
+   color: white;
+   padding: 10px 20px;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+   width: 100%;
+   margin-bottom: 10px;
+}
+
+.bancos li {
+   list-style: none;
+}
+
+.imgLibro {
+   width: 50px; /* Puedes ajustar el tamaño de la imagen */
+   height: auto;
+   border-radius: 5px;
+}
+
+.infoLIbro ul {
+   list-style: none;
+   padding: 0;
+}
+
+.eliminarLibro {
+   color: red;
+   cursor: pointer;
+   font-size: 0.9rem;
+   text-decoration: underline;
 }
 
 
-.infoCarro .carro .ul{
-   margin: 9rem;
-}
 
-.infoCarro{
-   text-decoration: none;
-   background-color: white;
-}
-
-.infoLIbro{
-   margin: 3rem;
-}
-.infoLIbro ul{
-   list-style-type: none;
-}
-
-.infoLIbro li {
-   margin-bottom: 2rem;
-}
-
-.nomLibro{
-   font-size: 3rem;
-   font-weight: 600;
-}
-.contador{
-   font-size: 2rem;
-   background-color: rgb(247, 247, 247);
-   margin-top: 4rem;
-   padding: auto;
-
-}
 
 
 
@@ -1648,14 +1651,7 @@ a:hover {
 
 /* info precio ANDRES ---------*/
 .infoPrecio{
-   padding: 3rem;
-   margin: 0 2rem;
-   margin-left: 2rem;
-   margin-top: 2rem;
-   text-decoration: none;
    background-color: white;
-   border-radius: 3rem;
-   list-style-type: none;
 }
 
 .resumenCom{
@@ -1664,10 +1660,6 @@ a:hover {
    margin-bottom: 4rem;
 }
 
-.infoPrecio ul{
-   list-style-type: none;
-   
-}
 .linea{
    height: .1rem;
    width: 100%;
@@ -1713,11 +1705,6 @@ h4{
    background-color:#E5AE85 ;
 }
 
-.bancos{
-   margin-top: 1rem;
-  display: flex;
-   
-}
 /* CSS DE PASARELA DE PAGO ------ANDRES ------------*/
 .contenedor1{
    border: 1.8px solid #3B7172;

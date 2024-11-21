@@ -1,13 +1,13 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>cart</title>
+   <title>Sobre Nosotros</title>
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
    <link rel="stylesheet" href="../Public/css/style.css">
-
 </head>
 <body>
 
@@ -37,63 +37,51 @@
   </nav>
 
 <section class="shopping-cart">
+   <div class="cart-container">
+      <div class="infoCompra">
+         <div class="infoCarro">
+            <h3 class="carro">Carro (2 productos)</h3>
+            <img class="imgLibro" src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1528206996i/38746485.jpg" alt="libroVenta">
+            <h4 class="eliminarLibro">Eliminar este libro</h4>
+         </div>
+         <div class="infoLIbro">
+            <ul>
+               <li class="nomLibro">Michelle Obama</li>
+               <li class="contador"><input class="number" type="number" min="1" name="product_quantity" value="1" class="qty"></li>
+               <li class="precioLibro">$90.000</li>
+               <li class="direccionEnv">
+                  <h3 class="titDirecionEnv">Dirección de envío</h3>
+                  <h3 class="direccionDest">Cr 64 # 75 a 37 int 204 Medellín Antioquia</h3>
+               </li>
+            </ul>
+         </div>
+      </div>
 
-   <div class="infoCompra">
-       <div class="infoCarro">
-         <h3 class="carro">Carro ( 2 productos)</h3>
-         <img class="imgLibro" src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1528206996i/38746485.jpg" alt="libroVenta">
-         <h4 class="eliminarLibro">Eliminar este libro</h4>
-       </div>
-       <div class="infoLIbro">
+      <!-- Resumen de la compra a la derecha -->
+      <div class="infoPrecio">
          <ul>
-            <li class="nomLibro">Michelle Obama</li>
-            <li class="contador"><input  class= "number" type="number" min="1" name="product_quantity" value="1" class="qty"></li>
-            <li class="precioLibro">$90.000</li>
-            <li class="direccionEnv">
-               <h3 class="titDirecionEnv">Direciòn de envio</h3>
-               <h3 class="direccionDest">Cr 64 # 75 a 37 int 204 Medellìn Antioquia</h3>
+            <h3 class="resumenCom">Resumen de la compra</h3>
+            <li class="precProductos">
+               <h4>Productos</h4>
+               <h4 class="valores">$90.000</h4>
+            </li>
+            <div class="linea"></div>
+            <li class="descuento">
+               <h4>Descuento</h4>
+               <h4 class="valores">$0</h4>
+            </li>
+            <div class="linea"></div>
+            <li class="descuento">
+               <h4>TOTAL</h4>
+               <h4 class="valores">$90.000</h4>
             </li>
          </ul>
-    </div>
-   </div>
-
-   <div class="infoPrecio">
-      <ul>
-         <h3 class="resumenCom">Resumen de la compra</h3>
-         <li class="precProductos">
-            <h4>Productos</h4>
-            <h4 class="valores">$90.000</h4>
-         </li>
-         <div class="linea"></div>
-         <li class="descuento">
-            <h4>Descuento</h4>
-            <h4 class="valores">$0</h4>
-         </li>
-         <div class="linea"></div>
-         <li class="descuento">
-            <h4>TOTAL</h4>
-            <h4 class="valores">  $90.000</h4>
-         </li>
-         </ul>
          <button class="botonCompra" type="submit">Continuar compra</button>
-      <ul class="bancos">
-         <li>
-            <img src="https://coopamigossigloxxi.co/wp-content/uploads/2022/08/logo-pse.png" alt="pse" width="50rem">
-         </li>
-         <li>
-            <img src="https://1000marcas.net/wp-content/uploads/2019/12/logo-Mastercard.png" alt="masterCard" width="70rem">
-         </li>
-         <li>
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Visa_Logo.png/640px-Visa_Logo.png" alt="visa" width="70rem">
-         </li>
-      </ul>
-      
-   </div>
-   
+         <ul class="bancos">
+            <li><img src="https://coopamigossigloxxi.co/wp-content/uploads/2022/08/logo-pse.png" alt="pse" width="50rem"></li>
+            <li><img src="https://1000marcas.net/wp-content/uploads/2019/12/logo-Mastercard.png" alt="masterCard" width="70rem"></li>
+            <li><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Visa_Logo.png/640px-Visa_Logo.png" alt="visa" width="70rem"></li>
+         </ul>
+      </div>
    </div>
 </section>
-
-<script src="../Public/js/script.js"></script>
-
-</body>
-</html>
