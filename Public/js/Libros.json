@@ -1,0 +1,112 @@
+[
+    {
+        "id": 1, 
+        "Nombre": "EN AGOSTO NOS VEMOS",
+        "Autor": "Gabriel Garcia Marquez",
+        "Precio": 100.000,
+        "Detalles": "la historia gira....",
+        "Categorias": "Arte",
+        "imagen": "../Public/images/agosto.jpg",
+        "url" : "../Vistas/Agosto.html"
+
+    },
+    
+    {
+        "id": 2, 
+        "Nombre": "EN AGOSTO NOS VEMOS",
+        "Autor": "Gabriel Garcia Marquez",
+        "Precio": 100.000,
+        "Detalles": "la historia gira....",
+        "Categorias": "Arte",
+        "imagen": "../Public/images/agosto.jpg",
+        "url" : "../Vistas/Agosto.html"
+
+    },
+
+    {
+        "id": 1, 
+        "Nombre": "EN AGOSTO NOS VEMOS",
+        "Autor": "Gabriel Garcia Marquez",
+        "Precio": 100.000,
+        "Detalles": "la historia gira....",
+        "Categorias": "Arte",
+        "imagen": "../Public/images/agosto.jpg",
+        "url" : "../Vistas/Agosto.html"
+
+    },
+
+
+
+    {
+        "id": 1, 
+        "Nombre": "EN AGOSTO NOS VEMOS",
+        "Autor": "Gabriel Garcia Marquez",
+        "Precio": 100.000,
+        "Detalles": "la historia gira....",
+        "Categorias": "Arte",
+        "imagen": "../Public/images/agosto.jpg",
+        "url" : "../Vistas/Agosto.html"
+
+    },
+
+    {
+        "id": 1, 
+        "Nombre": "EN AGOSTO NOS VEMOS",
+        "Autor": "Gabriel Garcia Marquez",
+        "Precio": 100.000,
+        "Detalles": "la historia gira....",
+        "Categorias": "Arte",
+        "imagen": "../Public/images/agosto.jpg",
+        "url" : "../Vistas/Agosto.html"
+
+    },
+
+    {
+        "id": 1, 
+        "Nombre": "EN AGOSTO NOS VEMOS",
+        "Autor": "Gabriel Garcia Marquez",
+        "Precio": 100.000,
+        "Detalles": "la historia gira....",
+        "Categorias": "Arte",
+        "imagen": "../Public/images/agosto.jpg",
+        "url" : "../Vistas/Agosto.html"
+
+    },
+
+    {
+        "id": 1, 
+        "Nombre": "EN AGOSTO NOS VEMOS",
+        "Autor": "Gabriel Garcia Marquez",
+        "Precio": 100.000,
+        "Detalles": "la historia gira....",
+        "Categorias": "Arte",
+        "imagen": "../Public/images/agosto.jpg",
+        "url" : "../Vistas/Agosto.html"
+
+    },
+
+    {
+        "id": 1, 
+        "Nombre": "EN AGOSTO NOS VEMOS",
+        "Autor": "Gabriel Garcia Marquez",
+        "Precio": 100.000,
+        "Detalles": "la historia gira....",
+        "Categorias": "Arte",
+        "imagen": "../Public/images/agosto.jpg",
+        "url" : "../Vistas/Agosto.html"
+
+    },
+
+    {
+        "id": 1, 
+        "Nombre": "EN AGOSTO NOS VEMOS",
+        "Autor": "Gabriel Garcia Marquez",
+        "Precio": 100.000,
+        "Detalles": "la historia gira....",
+        "Categorias": "Arte",
+        "imagen": "../Public/images/agosto.jpg",
+        "url" : "../Vistas/Agosto.html"
+
+    }
+
+]

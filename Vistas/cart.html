@@ -1,11 +1,10 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Sobre Nosotros</title>
+   <title>Carrito de Compras</title>
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
    <link rel="stylesheet" href="../Public/css/style.css">
 </head>
@@ -18,74 +17,130 @@
       </div>
       <ul>
           <li><a href="../Vistas/Masvendido.html">Lo Más Vendido</a></li>
-          <li class="dropdown">
-              <a href="javascript:void(0)">Categorías</a>
-              <ul class="dropdown-menu">
-                  <li><a href="../Vistas/Categoriapersonal.html">Desarrollo Personal</a></li>
-                  <li><a href="../Vistas/Categoriasarte.html">Arte</a></li>
-                  <li><a href="../Vistas/Categoriasficcion.html">Ficción</a></li>
-                  <li><a href="../Vistas/Categoriasinfantil.html">Infantiles</a></li>
-              </ul>
-          </li>
-          <li>
-              <input type="text" placeholder="Buscar libro o autor..." class="search-bar">
-              <button type="submit" class="search-button"><i class="fas fa-search"></i></button>
-          </li>
           <li><a href="../Vistas/login.html">Iniciar Sesión</a></li>
           <li><a href="../Vistas/cart.html"><i class="fas fa-shopping-cart"></i> Carrito</a></li>
       </ul>
-  </nav>
+   </nav>
 
 <section class="shopping-cart">
    <div class="cart-container">
       <div class="infoCompra">
          <div class="infoCarro">
-            <h3 class="carro">Carro (2 productos)</h3>
-            <img class="imgLibro" src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1528206996i/38746485.jpg" alt="libroVenta">
-            <h4 class="eliminarLibro">Eliminar este libro</h4>
+            <h3 class="carro">Carro (0 productos)</h3> <!-- Este número cambiará dinámicamente -->
+            <div class="cart-items"></div> <!-- Aquí se mostrarán los productos añadidos -->
          </div>
-         <div class="infoLIbro">
+         <div class="infoPrecio">
             <ul>
-               <li class="nomLibro">Michelle Obama</li>
-               <li class="contador"><input class="number" type="number" min="1" name="product_quantity" value="1" class="qty"></li>
-               <li class="precioLibro">$90.000</li>
-               <li class="direccionEnv">
-                  <h3 class="titDirecionEnv">Dirección de envío</h3>
-                  <h3 class="direccionDest">Cr 64 # 75 a 37 int 204 Medellín Antioquia</h3>
+               <h3 class="resumenCom">Resumen de la compra</h3>
+               <li class="precProductos">
+                  <h4>Productos</h4>
+                  <h4 class="valores" id="totalPrice">$0</h4> <!-- El precio total también será calculado -->
+               </li>
+               <div class="linea"></div>
+               <li class="descuento">
+                  <h4>Descuento</h4>
+                  <h4 class="valores">$0</h4>
+               </li>
+               <div class="linea"></div>
+               <li class="descuento">
+                  <h4>TOTAL</h4>
+                  <h4 class="valores" id="finalPrice">$0</h4> <!-- El precio final después de descuento -->
                </li>
             </ul>
+            <button class="botonCompra" type="submit">Continuar compra</button>
          </div>
-      </div>
-
-      <!-- Resumen de la compra a la derecha -->
-      <div class="infoPrecio">
-         <ul>
-            <h3 class="resumenCom">Resumen de la compra</h3>
-            <li class="precProductos">
-               <h4>Productos</h4>
-               <h4 class="valores">$90.000</h4>
-            </li>
-            <div class="linea"></div>
-            <li class="descuento">
-               <h4>Descuento</h4>
-               <h4 class="valores">$0</h4>
-            </li>
-            <div class="linea"></div>
-            <li class="descuento">
-               <h4>TOTAL</h4>
-               <h4 class="valores">$90.000</h4>
-            </li>
-         </ul>
-         <button class="botonCompra" type="submit">Continuar compra</button>
-         <ul class="bancos">
-            <li><img src="https://coopamigossigloxxi.co/wp-content/uploads/2022/08/logo-pse.png" alt="pse" width="50rem"></li>
-            <li><img src="https://1000marcas.net/wp-content/uploads/2019/12/logo-Mastercard.png" alt="masterCard" width="70rem"></li>
-            <li><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Visa_Logo.png/640px-Visa_Logo.png" alt="visa" width="70rem"></li>
-         </ul>
       </div>
    </div>
 </section>
 
 <script>
+   const cartItemsContainer = document.querySelector('.cart-items');
+   const totalPriceElement = document.getElementById('totalPrice');
+   const finalPriceElement = document.getElementById('finalPrice');
+   const carroElement = document.querySelector('.carro');
    
+   let cart = []; // Esto almacenará los productos del carrito
+   
+   // Ejemplo de productos con imagen
+   const books = [
+      { id: 1, name: "TOMATELO", price: 54900, image: "../Public/images/tomatelo.jpg", details: "Libro sobre Michelle Obama" },
+      { id: 2, name: "HARRY POTTER", price: 75000, image: "../Public/images/Harry.png", details: "Libro sobre Michelle Obama" },
+      { id: 3, name: "CREPUSCULO", price: 54000, image: "../Public/images/Crepusculo.png", details: "Libro sobre Michelle Obama" },
+      { id: 4, name: "TOMATELO", price: 54.900, image: "../Public/images/tomatelo.jpg", details: "Libro sobre Michelle Obama" },
+   ];
+
+   function addToCart(book) {
+      const productIndex = cart.findIndex(item => item.id === book.id);
+      if (productIndex !== -1) {
+         // Si el producto ya está en el carrito, solo aumentamos la cantidad
+         cart[productIndex].quantity++;
+      } else {
+         // Si no está, lo añadimos al carrito con una cantidad de 1
+         cart.push({ ...book, quantity: 1 });
+      }
+
+      updateCartUI();
+   }
+
+   // Función para eliminar un producto del carrito
+   function removeFromCart(bookId) {
+      cart = cart.filter(item => item.id !== bookId);
+      updateCartUI();
+   }
+
+   // Función para actualizar el carrito en la interfaz de usuario
+   function updateCartUI() {
+      // Limpiar el contenedor de items
+      cartItemsContainer.innerHTML = '';
+
+      // Calcular el total
+      let totalPrice = 0;
+      cart.forEach(item => {
+         const itemElement = document.createElement('div');
+         itemElement.classList.add('cart-item');
+         itemElement.innerHTML = `
+            <img src="${item.image}" alt="${item.name}" class="imgLibro"> <!-- Carga la imagen del libro -->
+            <div class="item-info">
+               <h4>${item.name}</h4>
+               <p>Precio: $${item.price}</p>
+               <input type="number" value="${item.quantity}" min="1" class="quantity-input" data-id="${item.id}">
+               <button class="remove-item" onclick="removeFromCart(${item.id})">Eliminar</button>
+            </div>
+         `;
+         cartItemsContainer.appendChild(itemElement);
+         totalPrice += item.price * item.quantity;
+      });
+
+      // Actualizar los totales
+      totalPriceElement.textContent = `$${totalPrice}`;
+      finalPriceElement.textContent = `$${totalPrice}`;
+
+      // Actualizar el número de productos en el carrito
+      carroElement.textContent = `Carro (${cart.length} productos)`;
+   }
+
+   // Event listener para actualizar la cantidad de un producto
+   cartItemsContainer.addEventListener('input', function (e) {
+      if (e.target.classList.contains('quantity-input')) {
+         const productId = parseInt(e.target.getAttribute('data-id'));
+         const newQuantity = parseInt(e.target.value);
+         const product = cart.find(item => item.id === productId);
+         if (product) {
+            product.quantity = newQuantity;
+            updateCartUI();
+         }
+      }
+   });
+
+
+   addToCart(books[0]);
+   
+
+
+
 </script>
+
+
+
+</body>
+</html>
