@@ -18,7 +18,7 @@ const categorias = [
   },
 
   {
-    name: 'Infaltil',
+    name: 'Infantil',
     URL: '/Vistas/Categoriasinfantil.html'
   }
 ]

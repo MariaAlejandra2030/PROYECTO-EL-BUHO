@@ -46,7 +46,8 @@ export function generartarjetas(categoria) {
 
         if (!id) return
         buscarLibros(id)
-  
+        
+      alert("Se ha añadido al carrito")
   
         console.log(id);
       })

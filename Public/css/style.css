@@ -235,7 +235,26 @@ nav .logo img {
    font-size: 24px;
    margin-bottom: 20px;
    text-align: center;
+   color: #3b7172;
 }
+
+.botonCompra {
+   display: inline-block;
+   background-color: #4CAF50; /* Color de fondo */
+   color: white; /* Color de texto */
+   padding: 15px 32px; /* Tamaño del botón */
+   text-align: center; /* Centrado del texto */
+   text-decoration: none; /* Eliminar subrayado */
+   font-size: 16px;
+   border-radius: 5px; /* Bordes redondeados */
+   transition: background-color 0.3s ease;
+}
+
+.botonCompra:hover {
+   background-color: #45a049; /* Cambio de color cuando se pasa el mouse */
+}
+
+
 
 /* Contenedor del formulario */
 #checkout-form-envio {
@@ -257,7 +276,7 @@ nav .logo img {
 
 .inputBox-envio input,
 .inputBox-envio select {
-   width: 400%;
+   width: 700px;
    padding: 10px;
    border: 1px solid #3b7172;
    border-radius: 5px;
@@ -450,7 +469,7 @@ nav ul li a {
    text-decoration: none;
 }
 
-.botonCompra {
+.botonCompra  {
    background-color: #28a745;
    color: white;
    padding: 10px 20px;
@@ -541,6 +560,7 @@ nav ul li a {
    width: 350px; /* Ancho más grande para los libros */
    box-shadow: 0 5px 15px #e5ae85; /* Sombra sutil */
    padding: 20px;
+   height: 800px;
 }
 
 .book img {
@@ -1489,7 +1509,7 @@ a:hover {
 }
 
 .infoPrecio {
-   width: 35%; /* Ocupa el 35% del espacio disponible */
+   width: 350px; /* Ocupa el 35% del espacio disponible */
    background-color: #f4f4f4; /* Un color de fondo claro para destacar el resumen */
    padding: 20px;
    border-radius: 8px;

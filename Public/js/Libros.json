@@ -2,8 +2,8 @@
     {
         "id": 1, 
         "Nombre": "MÚSICA SOLO MÚSICA",
-        "Autor": "Gabriel Garcia Marquez",
-        "Precio": 69.000,
+        "Autor": "karuki Murakami",
+        "Precio": "69.000",
         "Detalles": "Todo el mundo sabe que a Haruki Murakami le apasiona....",
         "Categorias": "Arte",
         "imagen": "../Public/images/musica.png",
@@ -15,8 +15,8 @@
     {
         "id": 2, 
         "Nombre": "FRIDA KAHLO",
-        "Autor": "Gabriel Garcia Marquez",
-        "Precio": 82.000,
+        "Autor": "Maria Hesse",
+        "Precio": "82.000",
         "Detalles": "Una preciosa biografía de la pintora mexicana....",
         "Categorias": "Arte",
         "imagen": "../Public/images/Frida.png.webp",
@@ -28,12 +28,13 @@
     {
         "id": 3, 
         "Nombre": "EL INCAL",
-        "Autor": "Gabriel Garcia Marquez",
-        "Precio": 100.000,
+        "Autor": "Alejandro Jodorowsky",
+        "Precio": "100.000",
         "Detalles": "Esta es la epopeya de John Difool, un detective...",
         "Categorias": "Arte",
         "imagen": "../Public/images/Incal.png.webp",
-        "url" : "../Vistas/Incal.html"
+        "url" : "../Vistas/Incal.html",
+        "quantity" : 0
 
     },
 
@@ -42,12 +43,13 @@
     {
         "id": 4, 
         "Nombre": "TÓMATELO CON ESTOISISMO",
-        "Autor": "Gabriel Garcia Marquez",
-        "Precio": 54.900,
+        "Autor": "Jaime Moreno Delgado",
+        "Precio": "54.900",
         "Detalles": "En este libro, Jaime Moreno Delgado explora los principios...",
         "Categorias": "Arte",
         "imagen": "../Public/images/Tomatelo.jpg",
-        "url" : "../Vistas/Tomateloarte.html"
+        "url" : "../Vistas/Tomateloarte.html",
+        "quantity" : 0
 
     },
 
@@ -55,47 +57,51 @@
         "id": 5, 
         "Nombre": "EN AGOSTO NOS VEMOS",
         "Autor": "Gabriel Garcia Marquez",
-        "Precio": 100.000,
+        "Precio": "100.000",
         "Detalles": "la historia gira....",
         "Categorias": "Arte",
         "imagen": "../Public/images/agosto.jpg",
-        "url" : "../Vistas/Agosto.html"
+        "url" : "../Vistas/Agosto.html",
+        "quantity" : 0
 
     },
 
     {
         "id": 6, 
         "Nombre": "LAS HIJAS DE EVA Y LILITH",
-        "Autor": "Gabriel Garcia Marquez",
-        "Precio": 100.000,
+        "Autor": "Elisa Queijeiro",
+        "Precio": "100.000",
         "Detalles": "En Las hijas de Eva y Lilith, Elisa Queijeiro ofrece...",
         "Categorias": "Arte",
         "imagen": "../Public/images/Hijas.jpg",
-        "url" : "../Vistas/Hijasarte.html"
+        "url" : "../Vistas/Hijasarte.html",
+        "quantity" : 0
 
     },
 
     {
         "id": 7, 
         "Nombre": "NADIE TIENE QUE SABERLO, EXCEPTO TÚ",
-        "Autor": "Gabriel Garcia Marquez",
-        "Precio": 82.000,
+        "Autor": "Madame G Rouge",
+        "Precio": "82.000",
         "Detalles": "Cuando Valeria se encuentra atrapada en una relación...",
         "Categorias": "Arte",
         "imagen": "../Public/images/Nadie.jpg",
-        "url" : "../Vistas/Nadiearte.html"
+        "url" : "../Vistas/Nadiearte.html",
+        "quantity" : 0
 
     },
 
     {
         "id": 31, 
         "Nombre": "PERSEPOLIS",
-        "Autor": "Gabriel Garcia Marquez",
-        "Precio": 82.000,
+        "Autor": "Marjane Satrapi",
+        "Precio": "82.000",
         "Detalles": "Cuando Valeria se encuentra atrapada en una relación...",
         "Categorias": "Arte",
         "imagen": "../Public/images/Persepolis.png.webp",
-        "url" : "../Vistas/Persepolis.html"
+        "url" : "../Vistas/Persepolis.html",
+        "quantity" : 0
 
     },
 
@@ -103,197 +109,228 @@
     {
         "id": 8, 
         "Nombre": "EL PEQUEÑO LIBRO DE LA ANSIEDAD",
-        "Autor": "Gabriel Garcia Marquez",
-        "Precio": 20.000,
+        "Autor": "Ferran Cases",
+        "Precio": "20.000",
         "Detalles": "práctica para manejar la ansiedad...",
         "Categorias": "Desarrollo personal",
         "imagen": "../Public/images/Ansiedad.jpg",
-        "url" : "../Vistas/Ansiedadpersonal.html"
+        "url" : "../Vistas/Ansiedadpersonal.html",
+        "quantity" : 0
 
     },
 
     {
         "id": 9, 
         "Nombre": "NO TE CREAS TODO LO QUE PIENSAS",
-        "Autor": "Gabriel Garcia Marquez",
-        "Precio": 85.000,
+        "Autor": "Josep Nguyen",
+        "Precio": "85.000",
         "Detalles": "Pensamientos automáticos...",
         "Categorias": "Desarrollo personal",
         "imagen": "../Public/images/Piensas.jpg",
-        "url" : "../Vistas/Piensaspersonal.html"
+        "url" : "../Vistas/Piensaspersonal.html",
+        "quantity" : 0
 
     },
     {
         "id": 10, 
-        "Nombre": "LA SOLUCIÓN A LA PROCASTINACIÓN",
-        "Autor": "Gabriel Garcia Marquez",
-        "Precio": 105.000,
+        "Nombre": "LA SOLUCIÓN A LA PROCRASTINACIÓN",
+        "Autor": "Timothy A. Pychyl",
+        "Precio": "105.000",
         "Detalles": "La procrastinación es un comportamiento...",
         "Categorias": "Desarrollo personal",
         "imagen": "../Public/images/solucion.jpg",
-        "url" : "../Vistas/Solucionpersonal.html"
+        "url" : "../Vistas/Solucionpersonal.html",
+        "quantity" : 0
 
     },
     {
         "id": 11, 
         "Nombre": "HÁBITOS ATÓMICOS",
-        "Autor": "Gabriel Garcia Marquez",
-        "Precio": 65.000,
+        "Autor": "JAMES CREAR",
+        "Precio": "65.000",
         "Detalles": "Propone un enfoque innovador...",
         "Categorias": "Desarrollo personal",
         "imagen": "../Public/images/Habitos.jpg",
-        "url" : "../Vistas/Habitospersonal.html"
+        "url" : "../Vistas/Habitospersonal.html",
+        "quantity" : 0
 
     },
     {
         "id": 12, 
         "Nombre": "EL LENGUAJE DEL ALMA",
-        "Autor": "Gabriel Garcia Marquez",
-        "Precio": 20.000,
+        "Autor": "José Soler",
+        "Precio": "20.000",
         "Detalles": "Es una obra de autoayuda...",
         "Categorias": "Desarrollo personal",
         "imagen": "../Public/images/Alma.jpg",
-        "url" : "../Vistas/Almapersonal.html"
+        "url" : "../Vistas/Almapersonal.html",
+        "quantity" : 0
 
     },
     {
         "id": 13, 
         "Nombre": "ESTE DOLOR NO ES MÍO",
-        "Autor": "Gabriel Garcia Marquez",
-        "Precio": 45.000,
+        "Autor": "Mark Wolynn",
+        "Precio": "45.000",
         "Detalles": "ofrece una profunda reflexión...",
         "Categorias": "Desarrollo personal",
         "imagen": "../Public/images/Dolor.jpg",
-        "url" : "../Vistas/Dolorpersonal.html"
+        "url" : "../Vistas/Dolorpersonal.html",
+        "quantity" : 0
 
     },
     {
         "id": 14, 
         "Nombre": "LA VIDA SECRETA DE LA MENTE",
-        "Autor": "Gabriel Garcia Marquez",
-        "Precio": 95.000,
+        "Autor": "Mariano Sigman",
+        "Precio": "95.000",
         "Detalles": "Mariano Sigman se adentra en los misterios...",
         "Categorias": "Desarrollo personal",
         "imagen": "../Public/images/libro4.jpg",
-        "url" : "../Vistas/Mentepersonal.html"
+        "url" : "../Vistas/Mentepersonal.html",
+        "quantity" : 0
 
     },
     {
         "id": 15, 
         "Nombre": "EL PODER DE LA INTENCIÓN",
-        "Autor": "Gabriel Garcia Marquez",
-        "Precio": 65.000,
+        "Autor": "Wayne Dyer",
+        "Precio": "65.000",
         "Detalles": "Wayne Dyer nos invita a explorar cómo la intención...",
         "Categorias": "Desarrollo personal",
         "imagen": "../Public/images/libro10.jpg",
-        "url" : "../Vistas/Poder.html"
+        "url" : "../Vistas/Poder.html",
+        "quantity" : 0
 
     },
     {
         "id": 16, 
         "Nombre": "EL PERFUME DEL REY",
-        "Autor": "Gabriel Garcia Marquez",
-        "Precio": 89.000,
+        "Autor": "KARINE BERNAL LOBO",
+        "Precio": "89.000",
         "Detalles": "Entre el poder y el amor hay una línea peligrosa...",
         "Categorias": "Ficcion",
         "imagen": "../Public/images/Perfumedelrey.png",
-        "url" : "../Vistas/Permufe.html"
+        "url" : "../Vistas/Permufe.html",
+        "quantity" : 0
 
     },
     
     {
         "id": 17, 
         "Nombre": "CREPUSCULO",
-        "Autor": "Gabriel Garcia Marquez",
-        "Precio": 54.000,
+        "Autor": "Stephenie Meyer",
+        "Precio": "54.000",
         "Detalles": "Hay tres cosas de las que estoy completamente...",
         "Categorias": "Ficcion",
         "imagen": "../Public/images/Crepusculo.png",
-        "url" : "../Vistas/Crepusculo.html"
+        "url" : "../Vistas/Crepusculo.html",
+        "quantity" : 0
 
     },
 
     {
         "id": 18, 
         "Nombre": "NARNIA",
-        "Autor": "Gabriel Garcia Marquez",
-        "Precio": 139.900,
+        "Autor": "C.S. LEWIS",
+        "Precio": "139.900",
         "Detalles": "Disfruta de los siete libros de la serie de fantasía...",
         "Categorias": "Ficcion",
         "imagen": "../Public/images/Narnia.png",
-        "url" : "../Vistas/Narnia.html"
+        "url" : "../Vistas/Narnia.html",
+        "quantity" : 0
 
     },
 
     {
         "id": 19, 
         "Nombre": "DULCE MALDAD",
-        "Autor": "Gabriel Garcia Marquez",
-        "Precio": 29.900,
+        "Autor": "JESSICA RIVAS",
+        "Precio": "29.900",
         "Detalles": "El hermano de Arianne desapareció hace cinco años tras...",
         "Categorias": "Ficcion",
         "imagen": "../Public/images/Dulcemaldad.png",
-        "url" : "../Vistas/Dulce.html"
+        "url" : "../Vistas/Dulce.html",
+        "quantity" : 0
 
     },
 
     {
         "id": 20, 
         "Nombre": "HEARTLESS",
-        "Autor": "Gabriel Garcia Marquez",
-        "Precio": 127.000,
+        "Autor": "MARITSSA MEYER",
+        "Precio": "127.000",
         "Detalles": "Mucho antes de convertirse en el terror del País de las Maravillas...",
         "Categorias": "Ficcion",
         "imagen": "../Public/images/Heartles.png",
-        "url" : "../Vistas/Heartles.html"
+        "url" : "../Vistas/Heartles.html",
+        "quantity" : 0
 
     },
 
     {
         "id": 21, 
         "Nombre": "HARRY POTTER",
-        "Autor": "Gabriel Garcia Marquez",
-        "Precio": 75.000,
+        "Autor": "J K. ROWLING",
+        "Precio": "75.000",
         "Detalles": "Harry Potter se ha quedado huérfano y vive en casa...",
         "Categorias": "Ficcion",
         "imagen": "../Public/images/Harry.png",
-        "url" : "../Vistas/Harry.html"
+        "url" : "../Vistas/Harry.html",
+        "quantity" : 0
 
     },
 
     {
         "id": 22, 
         "Nombre": "HOLY GHOSTS",
-        "Autor": "Gabriel Garcia Marquez",
-        "Precio": 24.000,
+        "Autor": "DAVID J. SCHMIDT",
+        "Precio": "24.000",
         "Detalles": "¿Crees en fantasmas? Cuando las puertas y ventanas se abren...",
         "Categorias": "Ficcion",
         "imagen": "../Public/images/Libro7.jpg",
-        "url" : "../Vistas/Holy.html"
+        "url" : "../Vistas/Holy.html",
+        "quantity" : 0
 
     },
 
     {
         "id": 23, 
         "Nombre": "NADIE TIENE QUE SABERLO,EXCEPTO TU",
-        "Autor": "Gabriel Garcia Marquez",
-        "Precio": 82.000,
+        "Autor": "Madame G Rouge",
+        "Precio": "82.000",
         "Detalles": "Cuando Valeria se encuentra atrapada en una relación...",
         "Categorias": "Ficcion",
         "imagen": "../Public/images/Nadie.jpg",
-        "url" : "../Vistas/Nadiearte.html"
+        "url" : "../Vistas/Nadiearte.html",
+        "quantity" : 0
+    
+
+    },
+
+    {
+        "id": 31, 
+        "Nombre": "LAS AVENTURAS DE NICO Y NACHO",
+        "Autor": "Pablo Herrera",
+        "Precio": "20.000",
+        "Detalles": "La historia está ambientada en un mundo mágico...",
+        "Categorias": "Infantil",
+        "imagen": "../Public/images/Aventuras.jpg",
+        "url" : "../Vistas/Aventuras.html",
+        "quantity" : 0
 
     },
 
     {
         "id": 24, 
         "Nombre": "¡NO QUIERO EL CABELLO RIZADO!",
-        "Autor": "Gabriel Garcia Marquez",
-        "Precio": 25.000,
+        "Autor": "LAURA ELLEN ANDERSON",
+        "Precio": "25.000",
         "Detalles": "La historia sigue a Lola, una niña que tiene el cabello rizado...",
         "Categorias": "Infantil",
         "imagen": "../Public/images/Cabello.jpg",
-        "url" : "../Vistas/Cabello.html"
+        "url" : "../Vistas/Cabello.html",
+        "quantity" : 0
 
     },
 
@@ -301,12 +338,13 @@
     {
         "id": 25, 
         "Nombre": "EL PRINCIPITO",
-        "Autor": "Gabriel Garcia Marquez",
-        "Precio": 19.999,
+        "Autor": "ANTOINE DE SAINT-EXUPERY",
+        "Precio": "19.999",
         "Detalles": "La historia está narrada por un aviador, que después de sufrir...",
         "Categorias": "Infantil",
         "imagen": "../Public/images/Principito.jpg",
-        "url" : "../Vistas/Principito.html"
+        "url" : "../Vistas/Principito.html",
+        "quantity" : 0
 
     },
 
@@ -314,12 +352,13 @@
     {
         "id": 26, 
         "Nombre": "DESPUÉS DE LA LLUVIA",
-        "Autor": "Gabriel Garcia Marquez",
-        "Precio": 19.999,
+        "Autor": "MIGUEL CERRO",
+        "Precio": "19.999",
         "Detalles": "Miguel Cerro presenta una narrativa...",
         "Categorias": "Infantil",
         "imagen": "../Public/images/DespuesLluvia.jpg",
-        "url" : "../Vistas/Lluvia.html"
+        "url" : "../Vistas/Lluvia.html",
+        "quantity" : 0
 
     },
 
@@ -327,12 +366,13 @@
     {
         "id": 27, 
         "Nombre": "YO VOY CONMIGO",
-        "Autor": "Gabriel Garcia Marquez",
-        "Precio": 15.999,
+        "Autor": "RAQUEL DIAZ REGUERA",
+        "Precio": "15.999",
         "Detalles": "Es una obra que celebra la independencia...",
         "Categorias": "Infantil",
         "imagen": "../Public/images/Conmigo.jpg",
-        "url" : "../Vistas/Conmigo.html"
+        "url" : "../Vistas/Conmigo.html",
+        "quantity" : 0
 
     },
 
@@ -340,12 +380,13 @@
     {
         "id": 28, 
         "Nombre": "SALTAMONTES VA DE VIAJE",
-        "Autor": "Gabriel Garcia Marquez",
-        "Precio": 15.999,
+        "Autor": "ARNOLD LOBEL",
+        "Precio": "15.999",
         "Detalles": "Es una historia encantadora...",
         "Categorias": "Infantil",
         "imagen": "../Public/images/Saltamontes.jpg",
-        "url" : "../Vistas/Saltamontes.html"
+        "url" : "../Vistas/Saltamontes.html",
+        "quantity" : 0
 
     },
 
@@ -353,12 +394,13 @@
     {
         "id": 29, 
         "Nombre": "ESTRELLAS DE VAINILLA",
-        "Autor": "Gabriel Garcia Marquez",
-        "Precio": 24.999,
+        "Autor": "MOISE SHEINBERG",
+        "Precio": "24.999",
         "Detalles": "En esta historia, Nico y Nacho, dos chicos curiosos...",
         "Categorias": "Infantil",
         "imagen": "../Public/images/Estrellas.jpg",
-        "url" : "../Vistas/Estrellas.html"
+        "url" : "../Vistas/Estrellas.html",
+        "quantity" : 0
 
     },
 
@@ -366,12 +408,13 @@
     {
         "id": 30, 
         "Nombre": "LA NIÑA QUE BEBIO LUZ DE LUNA",
-        "Autor": "Gabriel Garcia Marquez",
-        "Precio": 19.999,
+        "Autor": "KELLY BARNHILL",
+        "Precio": "19.999",
         "Detalles": "La historia está ambientada en un mundo mágico...",
         "Categorias": "Infantil",
         "imagen": "../Public/images/LaNiña.jpg",
-        "url" : "../Vistas/LaNiña.html"
+        "url" : "../Vistas/LaNiña.html",
+        "quantity" : 0
 
     }
 

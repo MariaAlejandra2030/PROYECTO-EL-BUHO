@@ -14,21 +14,33 @@
          <img src="../Public/images/logo2.png" alt="Logo"> 
          <h3>Iniciar Sesión</h3>
          <form id="loginForm" onsubmit="return validarFormulario()">
-            <input type="email" name="email" id="email" placeholder="Correo Electrónico" required class="box">
+            <!-- Campo de correo electrónico -->
+            <input type="email" name="email" id="email" placeholder="Correo Electrónico" class="box">
             <div id="errorEmail" class="error"></div>
 
-            <input type="password" name="password" id="password" placeholder="Contraseña" required class="box">
+            <!-- Campo de contraseña -->
+            <input type="password" name="password" id="password" placeholder="Contraseña" class="box">
             <div id="errorPassword" class="error"></div>
 
-            <p><a href="#">¿Olvidaste la contraseña?</a></p> <!-- Enlace para recuperar contraseña -->
+            <!-- Enlace de recuperación de contraseña -->
+            <p><a href="#">¿Olvidaste la contraseña?</a></p>
+            
+            <!-- Enlace de condiciones de uso y privacidad -->
             <p>Al continuar, aceptas las <a href="#">Condiciones de uso</a> y el <a href="#">Aviso de privacidad</a></p>
 
-            <input type="submit" name="submit" value="Iniciar Sesión" class="btn">
+            <!-- Botón de envío del formulario -->
+            <button type="submit" class="btn">
+               Iniciar Se
+            </button>
+
          </form>
+         
+         <!-- Enlace de registro -->
          <p>¿No tienes una cuenta? <a href="../Vistas/register.html">Regístrate ahora</a></p>
       </div>
    </section>
 
+   <!-- Estilos para los mensajes de error -->
    <style>
       .error {
          color: red;
@@ -38,15 +50,19 @@
    </style>
 
    <script>
+      // Función para validar el formulario antes de enviarlo
       function validarFormulario() {
+         // Limpiar los mensajes de error anteriores
          document.getElementById('errorEmail').innerText = '';
          document.getElementById('errorPassword').innerText = '';
 
+         // Obtener los valores de los campos
          const email = document.getElementById('email').value;
          const password = document.getElementById('password').value;
 
          let validado = true;
 
+         // Validar el correo electrónico
          const regexEmail = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
          if (email.trim() === '') {
             document.getElementById('errorEmail').innerText = 'El correo electrónico es obligatorio.';
@@ -56,7 +72,7 @@
             validado = false;
          }
 
-
+         // Validar la contraseña
          if (password.trim() === '') {
             document.getElementById('errorPassword').innerText = 'La contraseña es obligatoria.';
             validado = false;
@@ -65,7 +81,13 @@
             validado = false;
          }
 
-         return validado;
+         // Si todos los campos son válidos, redirigir a la página principal
+         if (validado) {
+            window.location.href = '...Vistas/principal.html';  // Redirigir a la página principal
+         }
+
+         // Si alguno de los campos no es válido, prevenimos el envío del formulario
+         return validado;  
       }
    </script>
 </body>

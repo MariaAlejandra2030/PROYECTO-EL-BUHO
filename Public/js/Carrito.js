@@ -13,6 +13,22 @@ export function buscarLibros(id) {
    })
    libroID[0].quantity = 1
    let newCart = [...libroID, ...cart];
+   // let newCart = []
+   // for (let i = 0; i < cart.length; i++) {
+   //   if (cart[i].id === libroID[0].id) {
+   //     cart[i].qintity ++
+   //     newCart = cart
+   //     localStorage.setItem('Items', JSON.stringify(newCart))
+   //     break
+   //   }
+   
+   //   if (i === cart.length - 1) {
+   //     cart.push(libroID[0])
+   //   }
+   
+   //   newCart = cart
+   //   localStorage.setItem('Items', JSON.stringify(newCart))
+   // }
    localStorage.setItem('Items', JSON.stringify(newCart));
 }
 
@@ -85,8 +101,8 @@ export function updateCartUI() {
           <div class="cart-items"></div> <!-- Aquí se mostrarán los productos añadidos -->
         </div>
       `
-    
-    }
+
+   }
    cartItemsContainer.innerHTML = '';
 
    // Calcular el total

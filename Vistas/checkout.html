@@ -21,7 +21,6 @@
       </div>
       <ul>
           <li><a href="../Vistas/Masvendido.html">Lo Más Vendido</a></li>
-          <!-- Menú desplegable de Categorías -->
           <li class="dropdown">
               <a href="javascript:void(0)">Categorías</a>
               <ul class="dropdown-menu">
@@ -50,9 +49,6 @@
             <select name="country" id="country-envio" required>
                <option value="">Selecciona tu país</option>
                <option value="colombia">Colombia</option>
-               <option value="chile">Chile</option>
-               <option value="mexico">México</option>
-               <option value="argentina">Argentina</option>
             </select>
          </div>
          <div class="inputBox-envio">
@@ -88,7 +84,7 @@
       </div>
 
       <!-- Tarjeta de crédito (se muestra solo si se selecciona "Tarjeta de crédito") -->
-      <div id="credit-card-info-envio">
+      <div id="credit-card-info-envio" style="display:none;">
          <h4>Información de la tarjeta de crédito</h4>
          <div class="inputBox-envio">
             <span>Número de tarjeta:</span>
@@ -109,16 +105,17 @@
 
 </section>
 
-
 <script>
-document.getElementById('country').addEventListener('change', function() {
+document.getElementById('country-envio').addEventListener('change', function() {
    const country = this.value;
    const departmentSelect = document.getElementById('department');
    
+   // Limpiar departamentos anteriores
    departmentSelect.innerHTML = '<option value="">Selecciona tu departamento</option>';
 
+   // Dependiendo del país seleccionado, mostrar los departamentos
    if (country === 'colombia') {
-      departmentSelect.innerHTML += '<option value="bogota">Bogotá</option><option value="medellin">Medellín</option><option value="cartagena">Cartagena</option>';
+      departmentSelect.innerHTML += '<option value="bogota">Bogotá</option><option value="medellin">Medellín</option><option value="medellin">Barranquilla</option><option value="cartagena">Cartagena</option>';
    } else if (country === 'chile') {
       departmentSelect.innerHTML += '<option value="santiago">Santiago</option><option value="valparaiso">Valparaíso</option>';
    } else if (country === 'mexico') {
@@ -130,56 +127,13 @@ document.getElementById('country').addEventListener('change', function() {
 
 document.getElementById('payment-method').addEventListener('change', function() {
    const paymentMethod = this.value;
-   const creditCardInfo = document.getElementById('credit-card-info');
+   const creditCardInfo = document.getElementById('credit-card-info-envio');
    
    if (paymentMethod === 'credit card') {
       creditCardInfo.style.display = 'block';
    } else {
       creditCardInfo.style.display = 'none';
    }
-});
-
-
-document.getElementById('checkout-form').addEventListener('submit', function(event) {
-   event.preventDefault(); 
-
-   const country = document.getElementById('country').value;
-   const department = document.getElementById('department').value;
-   const city = document.getElementById('city').value;
-   const address = document.getElementById('address').value;
-   const recipient = document.getElementById('recipient').value;
-   const phone = document.getElementById('phone').value;
-   const paymentMethod = document.getElementById('payment-method').value;
-
-   if (!country || !department || !city || !address || !recipient || !phone) {
-      alert('Por favor, completa todos los campos obligatorios.');
-      return;
-   }
-
-   const phoneRegex = /^[0-9]+$/;
-   if (!phoneRegex.test(phone)) {
-      alert('Por favor, ingresa un teléfono válido.');
-      return;
-   }
-
-   if (paymentMethod === 'credit card') {
-      const cardNumber = document.getElementById('card-number').value;
-      const expiryDate = document.getElementById('expiry-date').value;
-      const cvv = document.getElementById('cvv').value;
-
-      if (!cardNumber || !expiryDate || !cvv) {
-         alert('Por favor, completa toda la información de la tarjeta de crédito.');
-         return;
-      }
-
-      const cardNumberRegex = /^\d{16}$/;
-      if (!cardNumberRegex.test(cardNumber)) {
-         alert('El número de tarjeta debe tener 16 dígitos.');
-         return;
-      }
-   }
-
-   alert('Formulario enviado correctamente. Procesando tu pedido...');
 });
 </script>
 
