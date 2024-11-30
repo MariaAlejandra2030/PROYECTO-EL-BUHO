@@ -217,6 +217,43 @@ nav .logo img {
    width: 220px;
 }
 
+
+.about {
+   width: 100%; /* Asegúrate de que el contenedor ocupe todo el ancho disponible */
+}
+
+.flexBanner {
+   display: flex;  /* Utilizamos flexbox para organizar los elementos */
+   justify-content: space-between; /* Espacio entre los elementos de izquierda a derecha */
+   align-items: center; /* Centra los elementos verticalmente */
+   text-align: center; /* Asegura que los textos estén centrados dentro de sus contenedores */
+   padding: 20px;
+}
+
+.text-left, .text-right {
+   flex: 1; /* Los textos ocupan el mismo espacio de manera flexible */
+}
+
+.text-left {
+   text-align: left; /* Alinea el texto a la izquierda */
+}
+
+.text-right {
+   text-align: right; /* Alinea el texto a la derecha */
+}
+
+.image-container {
+   display: flex; /* Utilizamos flexbox para alinear las imágenes */
+   justify-content: center; /* Centra las imágenes horizontalmente */
+   gap: 20px; /* Espacio entre las imágenes */
+}
+
+.image-container img {
+   max-width: 150px; /* Ajusta el tamaño de las imágenes */
+   height: auto;
+}
+
+
 /* Estilo para la hoja de andres check */
 
 .checkout-envio {
@@ -226,7 +263,7 @@ nav .logo img {
    padding: 25px 25px;
    background-color: #fff;
    border-radius: 21px;
-   border: 1px solid #3b7172;
+   border: 2px solid #3b7172;
    font-size: 18px;
 }
 
@@ -249,6 +286,54 @@ nav .logo img {
    border-radius: 5px; /* Bordes redondeados */
    transition: background-color 0.3s ease;
 }
+
+
+
+/* Sección de comentarios */
+.comments-section {
+   margin-top: 30px;
+   padding: 20px;
+   background-color: #f9f9f9;
+}
+
+/* Cada comentario */
+.comment {
+   margin-bottom: 20px;
+   padding: 10px;
+   background-color: #fff;
+   border: 1px solid #ddd;
+   border-radius: 5px;
+}
+
+/* Estilo del nombre de usuario */
+.user-rating {
+   display: flex;
+   align-items: center;
+}
+
+/* Nombre del usuario en negrita */
+.user-name {
+   font-weight: bold;
+   margin-right: 10px;
+   font-size: 18px;
+   color:#3b7172
+}
+
+/* Estilo de las estrellas */
+.user-stars i {
+   color: #d98648;
+   margin-right: 2px;
+}
+
+/* Comentario del usuario */
+.user-comment {
+   margin-top: 10px;
+   font-style: italic;
+}
+
+
+
+
 
 .botonCompra:hover {
    background-color: #45a049; /* Cambio de color cuando se pasa el mouse */
@@ -297,7 +382,7 @@ nav .logo img {
 }
 
 .btn-envio:hover {
-   background-color: #45a049;
+   background-color: #061c07;
 }
 
 /* Estilo de la información de la tarjeta de crédito */
@@ -518,7 +603,7 @@ nav ul li a {
 }
 
 .btn {
-   background-color: #4CAF50;
+   background-color: #2a512c;
    color: white;
    padding: 15px;
    border: none;
@@ -557,7 +642,7 @@ nav ul li a {
    border: 1px solid #ccc; /* Bordes alrededor de los libros */
    border-radius: 2.5rem; /* Bordes redondeados */
    background-color: #fff; /* Fondo blanco */
-   width: 350px; /* Ancho más grande para los libros */
+   width: 410px; /* Ancho más grande para los libros */
    box-shadow: 0 5px 15px #e5ae85; /* Sombra sutil */
    padding: 20px;
    height: 800px;
@@ -566,7 +651,7 @@ nav ul li a {
 .book img {
 
    max-width: 600px; 
-    height: 373px; 
+    height: 470px; 
    
 }
 .book:hover {

@@ -40,8 +40,7 @@
   </nav>
 
 <section class="checkout-envio">
-
-   <form action="" method="post-envio" id="checkout-form-envio">
+   <form action="" method="post" id="checkout-form-envio">
       <h3>DATOS DE ENVÍO</h3>
       <div class="flex">
          <div class="inputBox-envio">
@@ -52,10 +51,9 @@
             </select>
          </div>
          <div class="inputBox-envio">
-            <span>Departamento*</span>
+            <span>Ciudad*</span>
             <select name="department" id="department" required>
                <option value="">Selecciona tu departamento</option>
-               <!-- Los departamentos se llenarán según el país seleccionado -->
             </select>
          </div>
          <div class="inputBox-envio">
@@ -74,16 +72,8 @@
             <span>Teléfono*</span>
             <input type="text" name="phone" id="phone" required placeholder="Ingresa tu teléfono">
          </div>
-         <div class="inputBox-envio">
-            <span>Método de pago</span>
-            <select name="payment-method" id="payment-method" required>
-               <option value="cash on delivery">PSE</option>
-               <option value="credit card">Tarjeta de crédito</option>
-            </select>
-         </div>
       </div>
 
-      <!-- Tarjeta de crédito (se muestra solo si se selecciona "Tarjeta de crédito") -->
       <div id="credit-card-info-envio" style="display:none;">
          <h4>Información de la tarjeta de crédito</h4>
          <div class="inputBox-envio">
@@ -102,38 +92,56 @@
 
       <input type="submit" value="Comprar ahora" class="btn-envio" name="order_btn-envio">
    </form>
-
 </section>
 
 <script>
-document.getElementById('country-envio').addEventListener('change', function() {
-   const country = this.value;
-   const departmentSelect = document.getElementById('department');
-   
-   // Limpiar departamentos anteriores
-   departmentSelect.innerHTML = '<option value="">Selecciona tu departamento</option>';
+// Validación del formulario y redirección
+document.getElementById('checkout-form-envio').addEventListener('submit', function(event) {
+    event.preventDefault(); // Evitar que el formulario se envíe por defecto
 
-   // Dependiendo del país seleccionado, mostrar los departamentos
-   if (country === 'colombia') {
-      departmentSelect.innerHTML += '<option value="bogota">Bogotá</option><option value="medellin">Medellín</option><option value="medellin">Barranquilla</option><option value="cartagena">Cartagena</option>';
-   } else if (country === 'chile') {
-      departmentSelect.innerHTML += '<option value="santiago">Santiago</option><option value="valparaiso">Valparaíso</option>';
-   } else if (country === 'mexico') {
-      departmentSelect.innerHTML += '<option value="cdmx">CDMX</option><option value="guadalajara">Guadalajara</option>';
-   } else if (country === 'argentina') {
-      departmentSelect.innerHTML += '<option value="buenos-aires">Buenos Aires</option><option value="cordoba">Córdoba</option>';
-   }
+    // Validaciones: Verificar que todos los campos requeridos están completos
+    const country = document.getElementById('country-envio').value;
+    const department = document.getElementById('department').value;
+    const city = document.getElementById('city').value;
+    const address = document.getElementById('address').value;
+    const recipient = document.getElementById('recipient').value;
+    const phone = document.getElementById('phone').value;
+    const paymentMethod = document.getElementById('payment-method').value;
+
+    // Verificar que todos los campos estén llenos
+    if (!country || !department || !city || !address || !recipient || !phone || !paymentMethod) {
+        alert("Por favor, completa todos los campos obligatorios.");
+        return; // Si algún campo está vacío, no hacemos nada más
+    }
+
+    // Redirigir a la pasarela de pagos después de la validación
+    window.location.href = "../Vistas/pasarela_pago_nuevo.html"; // Redirige a la página de la pasarela de pagos
 });
 
+// Mostrar campos de tarjeta de crédito solo si se selecciona "Tarjeta de crédito"
 document.getElementById('payment-method').addEventListener('change', function() {
-   const paymentMethod = this.value;
-   const creditCardInfo = document.getElementById('credit-card-info-envio');
-   
-   if (paymentMethod === 'credit card') {
-      creditCardInfo.style.display = 'block';
-   } else {
-      creditCardInfo.style.display = 'none';
-   }
+    const paymentMethod = this.value;
+    const creditCardInfo = document.getElementById('credit-card-info-envio');
+    
+    if (paymentMethod === 'credit card') {
+        creditCardInfo.style.display = 'block';
+    } else {
+        creditCardInfo.style.display = 'none';
+    }
+});
+
+// Llenar departamentos según el país seleccionado
+document.getElementById('country-envio').addEventListener('change', function() {
+    const country = this.value;
+    const departmentSelect = document.getElementById('department');
+    
+    // Limpiar departamentos anteriores
+    departmentSelect.innerHTML = '<option value="">Selecciona tu departamento</option>';
+
+    // Dependiendo del país seleccionado, mostrar los departamentos
+    if (country === 'colombia') {
+        departmentSelect.innerHTML += '<option value="bogota">Bogotá</option><option value="medellin">Medellín</option><option value="barranquilla">Barranquilla</option><option value="cartagena">Cartagena</option>';
+    } 
 });
 </script>
 

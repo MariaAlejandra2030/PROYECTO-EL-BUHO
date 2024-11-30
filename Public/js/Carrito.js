@@ -131,6 +131,7 @@ export function updateCartUI() {
    carroElement.textContent = `Carro (${cart.length} productos)`;
 }
 
+
 // Event listener para actualizar la cantidad de un producto
 
 export function onProduct() {

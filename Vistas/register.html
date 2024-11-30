@@ -12,7 +12,7 @@
    <section class="registro">
       <div class="Registro-container">
          <img src="../Public/images/logo2.png" alt="Logo" class="logo-registro"> <!-- Agrega tu logo aquí -->
-         <form id="registroForm" onsubmit="return validarFormulario()">
+         <form id="registroForm" onsubmit="return validarFormulario(event)">
             <h3>Regístrate Ahora</h3>
             <input type="text" name="name" id="name" placeholder="Nombre" required class="box">
             <div id="errorName" class="error"></div>
@@ -27,7 +27,7 @@
             <div id="errorCpassword" class="error"></div>
 
             <input type="submit" name="submit-registro" value="Registrate" class="btn-registro">
-            <p>Ya estas registrado? <a href="../Vistas/principal.html">Iniciar Sección</a></p>
+            <p>Ya estas registrado? <a href="../Vistas/principal.html">Iniciar Sesión</a></p>
          </form>
       </div>
    </section>
@@ -40,13 +40,17 @@
    </style>
 
    <script>
-      function validarFormulario() {
+      function validarFormulario(event) {
+         // Evitar el envío del formulario
+         event.preventDefault();
+         
+         // Limpiar errores previos
          document.getElementById('errorName').innerText = '';
          document.getElementById('errorEmail').innerText = '';
          document.getElementById('errorPassword').innerText = '';
          document.getElementById('errorCpassword').innerText = '';
 
-
+         // Obtener los valores de los campos
          const name = document.getElementById('name').value;
          const email = document.getElementById('email').value;
          const password = document.getElementById('password').value;
@@ -54,41 +58,49 @@
 
          let validado = true;
 
-
+         // Validación del nombre
          if (name.trim() === '') {
-            document.getElementById('errorName').innerText = 'The name is required.';
+            document.getElementById('errorName').innerText = 'El nombre es requerido.';
             validado = false;
          } else if (name.trim().length <= 2) {
-            document.getElementById('errorName').innerText = 'The name must be longer than 2 characters.';
+            document.getElementById('errorName').innerText = 'El nombre debe tener más de 2 caracteres.';
             validado = false;
          }
 
+         // Validación del correo electrónico
          const regexEmail = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
          if (email.trim() === '') {
-            document.getElementById('errorEmail').innerText = 'The email is required.';
+            document.getElementById('errorEmail').innerText = 'El correo electrónico es requerido.';
             validado = false;
          } else if (!regexEmail.test(email)) {
-            document.getElementById('errorEmail').innerText = 'Please enter a valid email address.';
+            document.getElementById('errorEmail').innerText = 'Por favor ingrese un correo electrónico válido.';
             validado = false;
          }
 
+         // Validación de la contraseña
          if (password.trim() === '') {
-            document.getElementById('errorPassword').innerText = 'The password is required.';
+            document.getElementById('errorPassword').innerText = 'La contraseña es requerida.';
             validado = false;
          } else if (password.length < 6) {
-            document.getElementById('errorPassword').innerText = 'The password must be at least 6 characters long.';
+            document.getElementById('errorPassword').innerText = 'La contraseña debe tener al menos 6 caracteres.';
             validado = false;
          }
 
+         // Validación de la confirmación de contraseña
          if (cpassword.trim() === '') {
-            document.getElementById('errorCpassword').innerText = 'Please confirm your password.';
+            document.getElementById('errorCpassword').innerText = 'Por favor confirme su contraseña.';
             validado = false;
          } else if (cpassword !== password) {
-            document.getElementById('errorCpassword').innerText = 'Passwords do not match.';
+            document.getElementById('errorCpassword').innerText = 'Las contraseñas no coinciden.';
             validado = false;
          }
 
+         // Si todas las validaciones son correctas, redirigir a la página principal
+         if (validado) {
+            window.location.href = "../Vistas/principal.html"; // Redirigir a la página principal
+         }
 
+         // Si no es válido, retornar false para evitar el envío del formulario
          return validado;
       }
    </script>
